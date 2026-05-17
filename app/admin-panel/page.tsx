@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import AdminForm from './AdminForm';
 import { loadPortfolio } from './actions';
+import { Agentation } from 'agentation';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,6 +27,14 @@ export default async function AdminPage({
           Edit every page below. Changes go live immediately after saving.
         </p>
       </header>
+
+      {process.env.NODE_ENV === "development" && (
+        <div className="flex justify-center mb-6">
+          <div className="rounded-full border-2 border-primary overflow-hidden inline-block">
+            <Agentation />
+          </div>
+        </div>
+      )}
 
       <AdminForm initialData={data} secret={secret} />
     </main>

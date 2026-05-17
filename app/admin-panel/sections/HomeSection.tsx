@@ -169,20 +169,6 @@ export default function HomeSection({ data, onChange, secret }: Props) {
         </Field>
       </Section>
 
-      <Section
-        title="Hero side images"
-        description="Multiple images displayed side-by-side next to the profile column. Use the reorder buttons to control display order."
-      >
-        <ImageCollection
-          items={data.heroSideImages}
-          onChange={(v) => update({ heroSideImages: v })}
-          folder="hero"
-          secret={secret}
-          itemLabel="image"
-          previewClassName="w-48 h-32 object-cover rounded border border-outline-variant"
-        />
-      </Section>
-
       <Section title="Bio text" description="Main bio paragraphs on the home page.">
         <Field label="Greeting (e.g. 'Hi!')">
           <TextInput

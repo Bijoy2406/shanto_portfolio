@@ -36,24 +36,6 @@ function SocialIcons({ links }: { links: SocialLinks }) {
   );
 }
 
-function HeroSideImages({ images }: { images: ImageItem[] }) {
-  const items = ordered(images);
-  if (items.length === 0) return null;
-  return (
-    <div className="flex flex-wrap gap-4 mt-6 justify-center">
-      {items.map((img) => (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          key={img.id}
-          src={img.url}
-          alt={img.alt ?? ''}
-          className="w-48 h-48 rounded-lg object-cover border-4 border-surface-container-lowest shadow-md"
-        />
-      ))}
-    </div>
-  );
-}
-
 function ProjectGrid({
   projects,
   containerCls,
@@ -111,7 +93,6 @@ export default async function Home() {
                 See My Resume
               </a>
             )}
-            <HeroSideImages images={home.heroSideImages} />
           </div>
 
           {/* Bio Column */}
