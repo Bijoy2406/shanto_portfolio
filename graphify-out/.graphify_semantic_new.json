@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "id": "portfolio_khondokar",
+      "label": "Khondokar Shahriar Shanto",
+      "file_type": "concept",
+      "source_file": "app/page.tsx"
+    },
+    {
+      "id": "portfolio_nextjs",
+      "label": "Next.js Framework",
+      "file_type": "concept",
+      "source_file": "package.json"
+    },
+    {
+      "id": "portfolio_engineeringsim",
+      "label": "Engineering Simulation & Design",
+      "file_type": "concept",
+      "source_file": "app/page.tsx"
+    },
+    {
+      "id": "portfolio_productdesign",
+      "label": "Product Design and Development",
+      "file_type": "concept",
+      "source_file": "app/page.tsx"
+    },
+    {
+      "id": "app_about",
+      "label": "About Page",
+      "file_type": "code",
+      "source_file": "app/about/page.tsx"
+    },
+    {
+      "id": "app_contact",
+      "label": "Contact Page",
+      "file_type": "code",
+      "source_file": "app/contact/page.tsx"
+    },
+    {
+      "id": "app_projects",
+      "label": "Projects Page",
+      "file_type": "code",
+      "source_file": "app/projects/page.tsx"
+    },
+    {
+      "id": "app_research",
+      "label": "Research Page",
+      "file_type": "code",
+      "source_file": "app/research/page.tsx"
+    },
+    {
+      "id": "app_publications",
+      "label": "Publications Page",
+      "file_type": "code",
+      "source_file": "app/publications/page.tsx"
+    },
+    {
+      "id": "app_writings",
+      "label": "Writings Page",
+      "file_type": "code",
+      "source_file": "app/writings/page.tsx"
+    }
+  ],
+  "edges": [
+    {
+      "source": "portfolio_khondokar",
+      "target": "portfolio_nextjs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json"
+    },
+    {
+      "source": "app_page",
+      "target": "portfolio_engineeringsim",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx"
+    },
+    {
+      "source": "app_page",
+      "target": "portfolio_productdesign",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx"
+    },
+    {
+      "source": "components_sidebar",
+      "target": "app_about",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Sidebar.tsx"
+    },
+    {
+      "source": "components_sidebar",
+      "target": "app_contact",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Sidebar.tsx"
+    },
+    {
+      "source": "components_sidebar",
+      "target": "app_projects",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Sidebar.tsx"
+    },
+    {
+      "source": "components_sidebar",
+      "target": "app_research",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Sidebar.tsx"
+    },
+    {
+      "source": "components_sidebar",
+      "target": "app_publications",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Sidebar.tsx"
+    },
+    {
+      "source": "components_sidebar",
+      "target": "app_writings",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Sidebar.tsx"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 2700,
+  "output_tokens": 900
+}

@@ -1,0 +1,287 @@
+{
+  "/home/salman/portfolio/eslint.config.mjs": {
+    "mtime": 1778925464.817115,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "/home/salman/portfolio/next-env.d.ts": {
+    "mtime": 1778962885.3483624,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
+    "semantic_hash": "d0f8375ae1199dc7acd3977fc33b78b8"
+  },
+  "/home/salman/portfolio/next.config.ts": {
+    "mtime": 1778925464.9156227,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "/home/salman/portfolio/package.json": {
+    "mtime": 1778927473.5265956,
+    "ast_hash": "cf68734017f4f32bdaaf2204ff8abf73",
+    "semantic_hash": "cf68734017f4f32bdaaf2204ff8abf73"
+  },
+  "/home/salman/portfolio/postcss.config.mjs": {
+    "mtime": 1778925464.8424284,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "/home/salman/portfolio/tsconfig.json": {
+    "mtime": 1778925488.0564823,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
+  },
+  "/home/salman/portfolio/app/layout.tsx": {
+    "mtime": 1778928531.2147171,
+    "ast_hash": "748962d16e1c2a78c7d63323033ebadd",
+    "semantic_hash": "748962d16e1c2a78c7d63323033ebadd"
+  },
+  "/home/salman/portfolio/app/page.tsx": {
+    "mtime": 1778964724.1339092,
+    "ast_hash": "f2d8967094efc2e8b7bccc4f43fb7200",
+    "semantic_hash": "f2d8967094efc2e8b7bccc4f43fb7200"
+  },
+  "/home/salman/portfolio/app/about/page.tsx": {
+    "mtime": 1778964734.7917485,
+    "ast_hash": "900bbae70891b1759072477219d18774",
+    "semantic_hash": "900bbae70891b1759072477219d18774"
+  },
+  "/home/salman/portfolio/app/achievements/page.tsx": {
+    "mtime": 1778927810.26831,
+    "ast_hash": "39d84fcad2d6c446c577079d06318b9f",
+    "semantic_hash": "39d84fcad2d6c446c577079d06318b9f"
+  },
+  "/home/salman/portfolio/app/affiliations/page.tsx": {
+    "mtime": 1778927815.810023,
+    "ast_hash": "bf5c8b3bff6f36ebfc85375e0a7a4ecd",
+    "semantic_hash": "bf5c8b3bff6f36ebfc85375e0a7a4ecd"
+  },
+  "/home/salman/portfolio/app/contact/page.tsx": {
+    "mtime": 1778964747.95355,
+    "ast_hash": "a7d617a869cd74762d54692b1e49728f",
+    "semantic_hash": "a7d617a869cd74762d54692b1e49728f"
+  },
+  "/home/salman/portfolio/app/courses/page.tsx": {
+    "mtime": 1778927838.833419,
+    "ast_hash": "29f228c5396112c31ac568e5b9bb4126",
+    "semantic_hash": "29f228c5396112c31ac568e5b9bb4126"
+  },
+  "/home/salman/portfolio/app/projects/page.tsx": {
+    "mtime": 1778927843.8283062,
+    "ast_hash": "8d9b74c64f0c72e764b67b596298fdb5",
+    "semantic_hash": "8d9b74c64f0c72e764b67b596298fdb5"
+  },
+  "/home/salman/portfolio/app/publications/page.tsx": {
+    "mtime": 1778927851.701308,
+    "ast_hash": "2aeb5317f93316ad1af87cd258905a33",
+    "semantic_hash": "2aeb5317f93316ad1af87cd258905a33"
+  },
+  "/home/salman/portfolio/app/research/page.tsx": {
+    "mtime": 1778927856.798642,
+    "ast_hash": "6999ec1cb762787b8d67df0ed78731f1",
+    "semantic_hash": "6999ec1cb762787b8d67df0ed78731f1"
+  },
+  "/home/salman/portfolio/app/volunteering/page.tsx": {
+    "mtime": 1778927862.908849,
+    "ast_hash": "8ebbc65156e73fbc1b9be6d939b07d92",
+    "semantic_hash": "8ebbc65156e73fbc1b9be6d939b07d92"
+  },
+  "/home/salman/portfolio/app/workshops/page.tsx": {
+    "mtime": 1778926250.5378816,
+    "ast_hash": "18758a09d1b415298c9925965de1b141",
+    "semantic_hash": "18758a09d1b415298c9925965de1b141"
+  },
+  "/home/salman/portfolio/app/writings/page.tsx": {
+    "mtime": 1778927867.9196112,
+    "ast_hash": "aba24cc3000c6366d24520af5d075157",
+    "semantic_hash": "aba24cc3000c6366d24520af5d075157"
+  },
+  "/home/salman/portfolio/components/Sidebar.tsx": {
+    "mtime": 1778928524.5958762,
+    "ast_hash": "f6a41271ffe29574dcacd2bed4a5bc61",
+    "semantic_hash": "f6a41271ffe29574dcacd2bed4a5bc61"
+  },
+  "/home/salman/portfolio/AGENTS.md": {
+    "mtime": 1778925578.6427577,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": "9e09241799026ac05be315a2f0b50055"
+  },
+  "/home/salman/portfolio/CLAUDE.md": {
+    "mtime": 1778925578.6435208,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "/home/salman/portfolio/README.md": {
+    "mtime": 1778925464.7967405,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "/home/salman/portfolio/stitch_exports/code/about.html": {
+    "mtime": 1778925272.4697785,
+    "ast_hash": "c7cb5ecbb484c8e48100d5821a617b51",
+    "semantic_hash": "c7cb5ecbb484c8e48100d5821a617b51"
+  },
+  "/home/salman/portfolio/stitch_exports/code/achievements.html": {
+    "mtime": 1778925275.7958336,
+    "ast_hash": "a03df82986972441c33a9b409fbd3a21",
+    "semantic_hash": "a03df82986972441c33a9b409fbd3a21"
+  },
+  "/home/salman/portfolio/stitch_exports/code/affiliations.html": {
+    "mtime": 1778925282.590855,
+    "ast_hash": "087ce271e48f130a34f6d5bb016d4366",
+    "semantic_hash": "087ce271e48f130a34f6d5bb016d4366"
+  },
+  "/home/salman/portfolio/stitch_exports/code/contact.html": {
+    "mtime": 1778925277.8834116,
+    "ast_hash": "f5dd5a1faafb7204fdbaba97489d1816",
+    "semantic_hash": "f5dd5a1faafb7204fdbaba97489d1816"
+  },
+  "/home/salman/portfolio/stitch_exports/code/courses.html": {
+    "mtime": 1778925278.958138,
+    "ast_hash": "e85f331241096ed76c436adb77fe13a9",
+    "semantic_hash": "e85f331241096ed76c436adb77fe13a9"
+  },
+  "/home/salman/portfolio/stitch_exports/code/home.html": {
+    "mtime": 1778925271.2646387,
+    "ast_hash": "3849d4f746b8e344e6b5795b32b17378",
+    "semantic_hash": "3849d4f746b8e344e6b5795b32b17378"
+  },
+  "/home/salman/portfolio/stitch_exports/code/invited_talks.html": {
+    "mtime": 1778925284.8066082,
+    "ast_hash": "ed32ca8ebdc7132c85e55012a42147a7",
+    "semantic_hash": "ed32ca8ebdc7132c85e55012a42147a7"
+  },
+  "/home/salman/portfolio/stitch_exports/code/projects.html": {
+    "mtime": 1778925281.5080872,
+    "ast_hash": "3d3ec7e04e059f41e4a72078b8253cd0",
+    "semantic_hash": "3d3ec7e04e059f41e4a72078b8253cd0"
+  },
+  "/home/salman/portfolio/stitch_exports/code/publications.html": {
+    "mtime": 1778925274.634979,
+    "ast_hash": "ee4c8b6c82d3c68398102ed0b32d8b04",
+    "semantic_hash": "ee4c8b6c82d3c68398102ed0b32d8b04"
+  },
+  "/home/salman/portfolio/stitch_exports/code/research.html": {
+    "mtime": 1778925273.5145724,
+    "ast_hash": "d040685c76fcc221039ded59a5405b85",
+    "semantic_hash": "d040685c76fcc221039ded59a5405b85"
+  },
+  "/home/salman/portfolio/stitch_exports/code/volunteering.html": {
+    "mtime": 1778925283.5722327,
+    "ast_hash": "d47111c0ba776bfdac075b0f69f2ac88",
+    "semantic_hash": "d47111c0ba776bfdac075b0f69f2ac88"
+  },
+  "/home/salman/portfolio/stitch_exports/code/workshops.html": {
+    "mtime": 1778925280.1396005,
+    "ast_hash": "e8c0095c5248ed6ff964d4968d474e87",
+    "semantic_hash": "e8c0095c5248ed6ff964d4968d474e87"
+  },
+  "/home/salman/portfolio/stitch_exports/code/writings.html": {
+    "mtime": 1778925276.8653984,
+    "ast_hash": "7df56bf39f1c1c2a94b7cb80ae190dca",
+    "semantic_hash": "7df56bf39f1c1c2a94b7cb80ae190dca"
+  },
+  "/home/salman/portfolio/.agents/rules/graphify.md": {
+    "mtime": 1778965034.8195403,
+    "ast_hash": "f1e53ecc9194573d3c28fc116c743a2e",
+    "semantic_hash": "f1e53ecc9194573d3c28fc116c743a2e"
+  },
+  "/home/salman/portfolio/.agents/workflows/graphify.md": {
+    "mtime": 1778965034.8196082,
+    "ast_hash": "afa1ffc01aa56ac681c7335686f44767",
+    "semantic_hash": "afa1ffc01aa56ac681c7335686f44767"
+  },
+  "/home/salman/portfolio/public/file.svg": {
+    "mtime": 1778925464.8485777,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "/home/salman/portfolio/public/globe.svg": {
+    "mtime": 1778925464.8599052,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "/home/salman/portfolio/public/next.svg": {
+    "mtime": 1778925464.872749,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "/home/salman/portfolio/public/vercel.svg": {
+    "mtime": 1778925464.8828256,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "/home/salman/portfolio/public/window.svg": {
+    "mtime": 1778925464.892386,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  "/home/salman/portfolio/public/me.webp": {
+    "mtime": 1778964520.037185,
+    "ast_hash": "7675441f12bcda44d677269cdfb92efe",
+    "semantic_hash": "7675441f12bcda44d677269cdfb92efe"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/about.png": {
+    "mtime": 1778925271.971943,
+    "ast_hash": "8e1a37bf6ba39bb2f3a33d06657a999f",
+    "semantic_hash": "8e1a37bf6ba39bb2f3a33d06657a999f"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/achievements.png": {
+    "mtime": 1778925275.3027885,
+    "ast_hash": "9a1b1abc12f4c0d245ce34cb19eeecbe",
+    "semantic_hash": "9a1b1abc12f4c0d245ce34cb19eeecbe"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/affiliations.png": {
+    "mtime": 1778925282.1161232,
+    "ast_hash": "41aac44ecb07ec77c9cc60e2c8ebb942",
+    "semantic_hash": "41aac44ecb07ec77c9cc60e2c8ebb942"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/contact.png": {
+    "mtime": 1778925277.415707,
+    "ast_hash": "f7a48a164b04f2d15017d78135237f66",
+    "semantic_hash": "f7a48a164b04f2d15017d78135237f66"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/courses.png": {
+    "mtime": 1778925278.4837198,
+    "ast_hash": "dbbde7aee2f7ed001ee8b1bc21ee93bd",
+    "semantic_hash": "dbbde7aee2f7ed001ee8b1bc21ee93bd"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/home.png": {
+    "mtime": 1778925270.639027,
+    "ast_hash": "1a01d4975fffb3c8d994525ad2721426",
+    "semantic_hash": "1a01d4975fffb3c8d994525ad2721426"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/invited_talks.png": {
+    "mtime": 1778925284.3326125,
+    "ast_hash": "659a39169db6d1e1688f5e1bac0b53d8",
+    "semantic_hash": "659a39169db6d1e1688f5e1bac0b53d8"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/projects.png": {
+    "mtime": 1778925280.7849474,
+    "ast_hash": "0c90d1df60e1d03452750038fa4a32d6",
+    "semantic_hash": "0c90d1df60e1d03452750038fa4a32d6"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/publications.png": {
+    "mtime": 1778925274.137651,
+    "ast_hash": "bef9b8dc429dabedb3af62104f29d0cb",
+    "semantic_hash": "bef9b8dc429dabedb3af62104f29d0cb"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/research.png": {
+    "mtime": 1778925273.0337973,
+    "ast_hash": "7944b463aadd3b442c4f57cefc69a994",
+    "semantic_hash": "7944b463aadd3b442c4f57cefc69a994"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/volunteering.png": {
+    "mtime": 1778925283.154259,
+    "ast_hash": "1a72f2e502020cab0695308fffce1ce8",
+    "semantic_hash": "1a72f2e502020cab0695308fffce1ce8"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/workshops.png": {
+    "mtime": 1778925279.667858,
+    "ast_hash": "b836ca0a74669b56e27f999f83ba16e2",
+    "semantic_hash": "b836ca0a74669b56e27f999f83ba16e2"
+  },
+  "/home/salman/portfolio/stitch_exports/screenshots/writings.png": {
+    "mtime": 1778925276.390062,
+    "ast_hash": "6d94cc1233f9a36f844b3f0c68905520",
+    "semantic_hash": "6d94cc1233f9a36f844b3f0c68905520"
+  }
+}

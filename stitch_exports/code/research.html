@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MD. JAHID HASAN - Research</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#1c1c1c',
+              light: '#333333',
+            },
+            surface: {
+              DEFAULT: '#fcf9f8',
+              dim: '#dcd9d9',
+              bright: '#fcf9f8',
+              container: {
+                lowest: '#ffffff',
+                low: '#f6f3f2',
+                DEFAULT: '#f0eded',
+                high: '#eae8e7',
+                highest: '#e4e2e1',
+              }
+            }
+          },
+          borderRadius: {
+            '8': '0.5rem',
+          }
+        }
+      }
+    }
+  </style>
+<style data-purpose="custom-styles">body {
+    background-color: theme("colors.surface.DEFAULT");
+    color: theme("colors.brand.DEFAULT")
+    }
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuD2HoJdjV6DcF-cSquOD9sG2KflgHwaUTmDowIUZul6UOQZkAwe5h-7TqjiJGm3JD4r5ALNL6TMu6nhTyE3sGhEKllwjp2iA1M7CBxRo4Aan2sgyLSUswu2igp8LvlHZRxLlqkKqEh46YqOCuG7kXHMuOOp9HMBjcJEq9yKeRJv_SIFVYYuSPax3tWBS4BPdjRK1PVaZh6OAxGPBNM0KSUDy9dNDDrl04Ucb0ELihotVZWBahyUUdW5zSR4Ufqj3B6x1UcFnQUrAUc);
+    background-size: cover;
+    background-position: center
+    }
+.stat-number {
+    font-size: 3rem;
+    font-weight: 300;
+    color: theme("colors.brand.light");
+    line-height: 1
+    }
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: theme("colors.gray.500");
+    margin-top: 0.5rem
+    }
+.social-icons a {
+    color: white;
+    transition: color 0.2s
+    }
+.social-icons a:hover {
+    color: #ccc
+    }
+.nav-link {
+    position: relative
+    }
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transition: width 0.2s
+    }
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%
+    }
+/* Simple Dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block
+    }</style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- BEGIN: TopBar -->
+<div class="bg-brand text-white text-xs py-2 px-4 flex justify-between items-center border-b border-gray-700">
+<div class="flex items-center space-x-4">
+<span>📍 Auburn, Alabama, USA</span>
+<span>📞 +1 (334) 552-3267</span>
+<span>✉️ jhasan@auburn.edu</span>
+</div>
+<div class="social-icons flex space-x-3">
+<a aria-label="LinkedIn" href="#"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+<a aria-label="Google Scholar" href="#"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.911L12 5l7.162 8.411L24 9.5z"></path></svg></a>
+<a aria-label="ResearchGate" href="#"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M19.5 0h-15c-2.486 0-4.5 2.014-4.5 4.5v15c0 2.486 2.014 4.5 4.5 4.5h15c2.486 0 4.5-2.014 4.5-4.5v-15c0-2.486-2.014-4.5-4.5-4.5zm-5.733 19.349h-3.057v-6.908h-2.133v6.908h-3.057v-14.698h5.36c2.81 0 4.673 1.547 4.673 3.996 0 1.96-1.121 3.254-2.733 3.73l3.057 6.972h-2.11z"></path></svg></a>
+<a aria-label="GitHub" href="#"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+</div>
+</div>
+<!-- END: TopBar -->
+<!-- BEGIN: MainHeader -->
+<header class="bg-brand text-white sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<!-- Logo Placeholder -->
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand font-bold text-xl">
+          MH
+        </div>
+<span class="font-bold text-xl tracking-wide">MD. JAHID HASAN</span>
+</div>
+<nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wide">
+<a class="nav-link" href="#">HOME</a>
+<a class="nav-link" href="#">ABOUT</a>
+<a class="nav-link active text-white" href="#">RESEARCH</a>
+<a class="nav-link" href="#">PUBLICATIONS</a>
+<a class="nav-link" href="#">ACHIEVEMENTS</a>
+<a class="nav-link" href="#">WRITINGS</a>
+<a class="nav-link" href="#">CONTACT</a>
+<div class="relative dropdown">
+<button class="nav-link flex items-center focus:outline-none">
+            MORE <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="dropdown-menu absolute hidden pt-2 right-0 w-48 bg-white text-gray-800 shadow-lg border-t-2 border-brand rounded-b-md">
+<a class="block px-4 py-2 hover:bg-gray-100 text-sm" href="#">Experience</a>
+<a class="block px-4 py-2 hover:bg-gray-100 text-sm" href="#">Education</a>
+<a class="block px-4 py-2 hover:bg-gray-100 text-sm" href="#">Skills</a>
+</div>
+</div>
+</nav>
+<!-- Mobile menu button -->
+<button class="md:hidden text-white focus:outline-none">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: Hero Section -->
+<section class="hero-bg py-24 md:py-32 flex justify-center items-center">
+<h1 class="text-white text-5xl md:text-6xl font-light tracking-wider uppercase">Research</h1>
+</section>
+<!-- END: Hero Section -->
+<main class="flex-grow">
+<!-- BEGIN: Research Interests & Tag Cloud -->
+<section class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<!-- Tag Cloud Image Placeholder -->
+<div class="flex justify-center">
+<img alt="Research Tag Cloud" class="max-w-full h-auto mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMFHK5x5JYP9u28ejTZmAMK_uBFOy-tpK8ZxxdUDrPnd-6nXbNYmhKqabzJuyow4Q34wGX9PnXcyJ-U0cnGrVTmuUB7O7eTlA7YNLv21XaFo8hRQBId5iaTWbtcsy9HL5HkmBhLzVpyW9yT65iR0xxtu9c-89uKpD8uc5mDb1RaxeyBnnxdoTelhCT1JXwhIsKs_JNxYhziMIvL3u26nSOOigfHjixx56UnPSERYUFE0GdCELTghVfYO4RVz-tywdInQw2oojx25U"/>
+</div>
+<div>
+<h2 class="text-3xl font-light mb-6 text-brand border-b border-gray-200 pb-2">Research Interests</h2>
+<ul class="list-disc pl-5 space-y-2 text-gray-700 font-light leading-relaxed">
+<li>Computational Fluid Dynamics (CFD), Bio-Fluid Combustion, Swirling Flow, Large Eddy Simulation (LES), Convective Heat Transfer, Nanofluids, Phase Change Materials, Aerodynamics and Design, Machine Learning and data driven methods.</li>
+</ul>
+</div>
+</section>
+<!-- END: Research Interests & Tag Cloud -->
+<!-- BEGIN: Badges Row -->
+<section class="max-w-7xl mx-auto px-4 pb-16">
+<div class="flex flex-wrap justify-center gap-2 text-xs font-semibold text-white">
+<span class="bg-blue-600 px-3 py-1 rounded">Scholar</span>
+<span class="bg-green-600 px-3 py-1 rounded">ResearchGate</span>
+<span class="bg-orange-600 px-3 py-1 rounded">Scopus</span>
+<span class="bg-green-500 px-3 py-1 rounded">ORCID</span>
+<span class="bg-purple-600 px-3 py-1 rounded">Clarivate</span>
+<span class="bg-blue-800 px-3 py-1 rounded">Publons</span>
+<span class="bg-black px-3 py-1 rounded">Academia.edu</span>
+<span class="bg-blue-700 px-3 py-1 rounded">ResearchID</span>
+<span class="bg-yellow-600 px-3 py-1 rounded">Loop</span>
+</div>
+</section>
+<!-- END: Badges Row -->
+<!-- BEGIN: Research Profile Stats -->
+<section class="bg-surface-container-low py-16 border-y border-gray-200 text-center">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="text-2xl font-light mb-2 text-brand">Research Profile Stats &amp; Index</h2>
+<p class="text-gray-500 mb-12 text-sm">Publication Years: 2022 - Present</p>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+<div>
+<div class="stat-number">42</div>
+<div class="stat-label">Published</div>
+</div>
+<div>
+<div class="stat-number">22</div>
+<div class="stat-label">Under Review</div>
+</div>
+<div>
+<div class="stat-number">1,125</div>
+<div class="stat-label">Citations</div>
+</div>
+<div>
+<div class="stat-number">20</div>
+<div class="stat-label">h-index</div>
+</div>
+<div>
+<div class="stat-number">33</div>
+<div class="stat-label">i10-index</div>
+</div>
+</div>
+<div class="mt-12">
+<a class="inline-block bg-brand text-white px-8 py-3 text-sm font-semibold tracking-wider hover:bg-gray-800 transition-colors" href="#">Research Resume</a>
+</div>
+</div>
+</section>
+<!-- END: Research Profile Stats -->
+<!-- BEGIN: Featured Research List -->
+<section class="max-w-4xl mx-auto px-4 py-16">
+<h2 class="text-3xl font-light text-center mb-12 border-b border-gray-200 pb-4">Featured Research</h2>
+<div class="space-y-12">
+<!-- Item 1 -->
+<article>
+<h3 class="text-xl font-medium mb-3 text-brand">Numerical Assessment of Oxy-Fuel Combustion for CCS Retrofitting in Coal-Fired Power Plants</h3>
+<p class="text-gray-700 font-light text-sm leading-relaxed text-justify">
+            This study evaluates the feasibility of retrofitting carbon capture and sequestration (CCS) technology in a 125 MW tangentially coal-fired Barapukuria Thermal Power Plant (BTPP), Bangladesh, to reduce emissions. Numerical simulations were conducted for the existing air-firing condition and five oxy-firing (OF) cases using the discrete droplet method (DDM), discrete transfer radiation method (DTRM), and k-ε turbulence model. A two-step reaction mechanism was applied for devolatilization and char oxidation. Model validation against plant data showed good agreement. Results indicate that increasing oxygen concentration in OF cases enhances combustion completeness and raises wall temperatures, reaching up to 1800 K at 100% load for OF25. NO<sub>x</sub> levels in OF25 were comparable to air-firing, and thermal equivalence between air and oxy-firing was observed at approximately OF29%. OF flame temperature, emissivity, and radiative heat transfer. These findings provide insights into optimizing oxy-fuel combustion for CCS integration in existing coal-fired plants.
+          </p>
+</article>
+<!-- Item 2 -->
+<article>
+<h3 class="text-xl font-medium mb-3 text-brand">CFD Analysis of Multi-Ribbed Geometry and Nanofluid Effects in Heat Exchangers</h3>
+<p class="text-gray-700 font-light text-sm leading-relaxed text-justify">
+            This research numerically explores the thermal performance of helical and straight heat exchangers combined with multi-ribbed geometries and varying concentrations of Al<sub>2</sub>O<sub>3</sub> and CuO water-based nanofluids. A validated CFD model was used to analyze nine configurations with different rib profiles (2, 4, and 6 ribs) and coil revolutions (10, 20, and 30). Results show that reducing rib count and increasing coil revolutions significantly improve heat transfer, with the 2-rib, 30-revolution design achieving the highest Nusselt number. Introducing nanofluids further boosts performance, with Al<sub>2</sub>O<sub>3</sub> providing the greatest enhancement and CuO<sub>2</sub> the least. Entropy generation rises with coil revolutions, while friction factor increases with rib complexity. The most efficient design in terms of thermal enhancement factor was 2 ribs with 10 revolutions (TEF = 1.04). This study offers practical guidelines for optimizing heat exchanger geometry and nanofluid selection to maximize thermo-hydraulic efficiency.
+          </p>
+</article>
+<!-- Item 3 -->
+<article>
+<h3 class="text-xl font-medium mb-3 text-brand">Improving Exhaust Gas Recirculation Cooling Performance Using Advanced Vortex Generator Designs</h3>
+<p class="text-gray-700 font-light text-sm leading-relaxed text-justify">
+            This study numerically investigates the improvement of Exhaust Gas Recirculation (EGR) cooling performance in automotive engines by introducing newly designed wing-type vortex generators (VGs) inside the EGR cooler duct. The CFD model was validated against available data, showing good agreement. Twelve VG shapes were analyzed at a constant entrance angle of 130° and inlet VG optimal for generating strong vortices. Among single VG designs, the kite-type wing provided the best cooling effect. Subsequently, this best-averaged concept with the different pitch distances, where the 2-kite-type wing VG at 2.5 mm pitch achieved the highest cooling performance, improving heat transfer by 11% compared to a single VG. Further comparisons revealed that 3-kite-type VGs outpace 2-kite VGs in terms of overall performance, making them the most favorable option for enhancing EGR cooler efficiency.
+          </p>
+</article>
+</div>
+</section>
+<!-- END: Featured Research List -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-brand text-white py-8 border-t border-gray-700 text-center text-sm font-light">
+<div class="max-w-7xl mx-auto px-4">
+<p>© 2024 Md. Jahid Hasan. Built with WordPress and the Highlight Theme.</p>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

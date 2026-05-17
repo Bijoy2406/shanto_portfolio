@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/research)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(npm run dev > /tmp/next.log 2>&1 & *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

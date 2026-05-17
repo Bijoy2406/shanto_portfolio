@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workshops - Md. Jahid Hasan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary": "#000002",
+                "on-secondary-fixed-variant": "#474745",
+                "primary-fixed": "#e5e2e1",
+                "surface-container-low": "#f6f3f2",
+                "inverse-primary": "#c8c6c5",
+                "tertiary-container": "#001a42",
+                "secondary-container": "#e1dfdd",
+                "surface-dim": "#dcd9d9",
+                "primary-container": "#1c1c1c",
+                "on-surface-variant": "#444748",
+                "surface-container-highest": "#e5e2e1",
+                "outline": "#747878",
+                "on-tertiary-fixed": "#001a42",
+                "tertiary-fixed-dim": "#adc6ff",
+                "surface-container-high": "#eae7e7",
+                "on-error-container": "#93000a",
+                "primary": "#010101",
+                "secondary": "#5e5e5c",
+                "on-secondary-container": "#636361",
+                "surface-container": "#f0eded",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed-dim": "#c8c6c4",
+                "tertiary-fixed": "#d8e2ff",
+                "on-background": "#1b1b1b",
+                "on-primary-fixed-variant": "#474746",
+                "on-error": "#ffffff",
+                "surface-bright": "#fcf9f8",
+                "on-secondary": "#ffffff",
+                "on-surface": "#1b1b1b",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-container": "#3981f5",
+                "primary-fixed-dim": "#c8c6c5",
+                "on-tertiary-fixed-variant": "#004395",
+                "surface": "#fcf9f8",
+                "inverse-on-surface": "#f3f0ef",
+                "on-primary-container": "#858484",
+                "inverse-surface": "#313030",
+                "surface-variant": "#e5e2e1",
+                "surface-tint": "#5f5e5e",
+                "error": "#ba1a1a",
+                "on-secondary-fixed": "#1b1c1a",
+                "outline-variant": "#c4c7c7",
+                "on-primary-fixed": "#1b1b1b",
+                "on-primary": "#ffffff",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#e4e2df",
+                "background": "#fcf9f8"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {},
+        "fontFamily": {
+                "headline": [
+                        "Geist"
+                ],
+                "display": [
+                        "Geist"
+                ],
+                "body": [
+                        "Inter"
+                ],
+                "label": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {}
+},
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #f7f4ed;
+    color: #1c1c1c;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-headline {
+    font-family: 'Geist', sans-serif;
+  }
+  .bg-cream {
+    background-color: #f7f4ed;
+  }
+  .border-cream {
+    border-color: #eceae4;
+  }
+  .shadow-inset {
+    box-shadow: rgba(255,255,255,0.2) 0px 0.5px 0px 0px inset, rgba(0,0,0,0.2) 0px 0px 0px 0.5px inset, rgba(0,0,0,0.05) 0px 1px 2px 0px;
+  }
+</style>
+</head>
+<body class="bg-surface font-body antialiased selection:bg-primary/20 selection:text-primary">
+<!-- Top NavBar -->
+<nav class="full-width top-0 sticky z-50 bg-background border-b border-outline-variant/30 flat no shadows flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto backdrop-blur-md bg-background/80">
+<div class="font-headline text-lg font-semibold tracking-[-0.9px] text-on-surface">
+<a class="hover:opacity-80 transition-opacity" href="#">Md. Jahid Hasan</a>
+</div>
+<div class="hidden md:flex items-center space-x-6 font-body text-sm">
+<a class="text-secondary hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200" href="#">Research</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200" href="#">Publications</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200" href="#">Achievements</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200" href="#">Writings</a>
+<!-- Active Dropdown equivalent -->
+<div class="relative group">
+<button class="text-primary border-b-2 border-primary font-medium pb-1 flex items-center space-x-1 group-hover:opacity-80 transition-all">
+<span>More</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-primary-container text-on-primary text-sm font-medium py-2 px-4 rounded-lg shadow-inset hover:opacity-80 transition-all active:scale-95">Contact</button>
+<button class="md:hidden text-on-surface p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[400px] flex items-center justify-center overflow-hidden border-b border-cream">
+<div class="absolute inset-0 z-0">
+<img alt="Audience at a workshop or conference, blurred background." class="w-full h-full object-cover opacity-80" data-alt="A softly blurred wide shot of an audience seated in an auditorium or conference hall. The lighting is warm and professional, focusing on the foreground while individuals in the background fade into a bokeh effect. The atmosphere is academic and attentive. The color palette incorporates warm neutral tones, creams, and subtle wooden textures consistent with a high-end, light-mode educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgSfnmqrYHqb1GDZ4ekSLfeNbE7A6q9J38NROiSULmp-wsqSSdG7vEca5vsW_R55SZCbPIWqlaXcpj7xlm_VCoo9TofU1VfSaNylBUM_IAmy-oQlOwtZ7NEREjBODUd5n7kUwWhMCGa6uHz5AWQAb7mCgKt19Htf3x-2ik2VqWbU6xd5N4YL9Vec_F8nQwBNVYtdp-R02Mul8HtVBPr06uu2aMmdxr9264IXeTaK84nsWyko3ZQ8n9EXCY0B5Mq-y-XSPSW6kzivk"/>
+<div class="absolute inset-0 bg-background/60 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<h1 class="font-headline font-semibold text-5xl md:text-[60px] tracking-[-1.5px] leading-[1.1] text-primary mb-4">WORKSHOPS</h1>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-6 py-20 space-y-32">
+<!-- Workshop 1 -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 relative rounded-xl overflow-hidden border border-cream group">
+<div class="aspect-[4/3] bg-surface-container-low relative">
+<img alt="3D Printing Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A bright, modern classroom setting where students and an instructor are gathered around a 3D printer. The room is well-lit with natural light and features clean, white desks and modern technology. The mood is collaborative and educational. The visual style is crisp and professional, using a warm cream and light gray color palette to align with a sophisticated, light-mode design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9xILWO0Tggy56Lc7yzKzCT2cl6VlzjJ54CQs2ymT5dntC5PQIpVi1og80ExKtoUPsdLT3voUn8KnozNCmQLnsUx8VgFhvzWKve4QjyD95UCAIE4aogjUeVPPR7FGQkkjJ5KdvSG3s6PK5uDAkPcs7Bw3fT8IAbRZhswdRjSQiEBnN_2xOqwT333lfxJBvYBWFl0eAv6QRGDbETTqNxCkduCdqu--3P7bcc8z_pGXeedzhLiPPTex_DvLTMEXHIWAQ4pdhD8EI-Y"/>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<h2 class="font-headline font-semibold text-4xl tracking-[-1.2px] leading-tight text-primary">Short Course on 3D Printing Using Reverse Engineering Technique by MPE, IUT</h2>
+<p class="font-body text-base text-secondary leading-relaxed">The Mechanical and Production Engineering (MPE) department at IUT organized a dynamic short course on "3D Printing Using Reverse Engineering Technique" in the 17th and 18th of November, 2023. The course garnered enthusiastic participation from diverse industrial backgrounds, fostering an environment of shared learning and innovation. We had an immersive experience covering scanning methods, (FDM) 3D printing, and additive manufacturing techniques. Practical</p></div></section></main></body></html>

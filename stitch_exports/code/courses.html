@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Courses - MD. JAHID HASAN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f6f6f6',
+              100: '#e7e7e7',
+              200: '#d1d1d1',
+              300: '#b0b0b0',
+              400: '#888888',
+              500: '#6d6d6d',
+              600: '#5d5d5d',
+              700: '#4f4f4f',
+              800: '#454545',
+              900: '#3d3d3d',
+              950: '#262626',
+              DEFAULT: '#1c1c1c',
+            },
+            teal: {
+              DEFAULT: '#2a9d8f',
+              dark: '#21867a'
+            }
+          },
+          borderRadius: {
+            'none': '0',
+            'sm': '0.125rem',
+            DEFAULT: '0.5rem',
+            'md': '0.375rem',
+            'lg': '0.5rem',
+            'xl': '0.75rem',
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            'full': '9999px',
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="custom-styles">body {
+    font-family: "Geist", sans-serif
+    }
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDFl8V2ml-gzpbm5xltx7tkKvIyti5aRcsMVOJv9zYXZ9ZZGWcJcwtGE7pqdqhxVg_UVs9Hb7uzrc6iRJeM5HNruaKisCgVUx7SurEJ-ghSwL-FGvOSK2reihcpRI60zj5LfWv1neXOUnDTN_tJc-DGAjjwCFoQQ1_Yt-cpmWIO-PHHMxplb2F5MZ1b2JA02I-mDFSOWGZwhNGkyx3bZbWQdEOVpxuA4j6B7-pXuzL_7U3pfLdOWJ07bQReDAJzBFQ0tPOQ3WGn4rE);
+    background-size: cover;
+    background-position: center
+    }
+.card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+    }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+<!-- BEGIN: TopBar -->
+<div class="bg-[#2a2a2a] text-gray-300 text-sm py-2">
+<div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+<div class="flex items-center space-x-6">
+<div class="flex items-center">
+<i class="fa-solid fa-location-dot mr-2"></i>
+<span>Auburn, Alabama, USA</span>
+</div>
+<div class="flex items-center">
+<i class="fa-solid fa-phone mr-2"></i>
+<span>+1 (334) 663-5627</span>
+</div>
+<div class="flex items-center">
+<i class="fa-solid fa-envelope mr-2"></i>
+<a class="hover:text-white transition-colors" href="mailto:mzh0266@auburn.edu">mzh0266@auburn.edu</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hover:text-white transition-colors" href="#"><i class="fa-solid fa-link"></i></a>
+</div>
+</div>
+</div>
+<!-- END: TopBar -->
+<!-- BEGIN: MainHeader -->
+<header class="hero-bg relative z-10">
+<div class="container mx-auto px-4 py-6">
+<div class="flex justify-between items-center">
+<!-- Logo -->
+<a class="text-white text-2xl font-bold uppercase tracking-wider" href="#">
+<span class="font-normal">MD.</span> JAHID HASAN
+        </a>
+<!-- Navigation -->
+<nav class="hidden md:block">
+<ul class="flex space-x-6 text-sm font-semibold text-white uppercase tracking-wider">
+<li><a class="hover:text-gray-300 transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-gray-300 transition-colors" href="#">About</a></li>
+<li><a class="hover:text-gray-300 transition-colors" href="#">Research</a></li>
+<li><a class="hover:text-gray-300 transition-colors" href="#">Publications</a></li>
+<li><a class="hover:text-gray-300 transition-colors" href="#">Achievements</a></li>
+<li><a class="hover:text-gray-300 transition-colors" href="#">Writings</a></li>
+<li><a class="hover:text-gray-300 transition-colors" href="#">Contact</a></li>
+<li class="relative group">
+<button class="hover:text-gray-300 transition-colors flex items-center">
+                More <i class="fa-solid fa-caret-down ml-1"></i>
+</button>
+<ul class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg hidden group-hover:block py-2">
+<li><a class="block px-4 py-2 hover:bg-gray-100" href="#">Item 1</a></li>
+<li><a class="block px-4 py-2 hover:bg-gray-100" href="#">Item 2</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- Page Title -->
+<div class="container mx-auto px-4 py-24 text-center">
+<h1 class="text-5xl font-light text-white uppercase tracking-widest">Courses</h1>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow container mx-auto px-4 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<!-- Course Card 1 -->
+<div class="bg-white rounded overflow-hidden card-shadow flex flex-col">
+<div class="h-64 bg-white flex items-center justify-center p-8 border-b border-gray-100">
+<img alt="Islamic University of Technology" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOQDxJeHwU1NT7-WrunKZx5RHHAq9LKSH-fEsGOxqsUd4owDMU8U5VYzuB1CCXZHFeEP4Z4t36B0YzX2zRHsDn9XIxYZPTtDSZG85RIwWhdIuNbn1zPFWIBteHPhAY5QbBmDur54oc1waLnr_3bys-kYHH3XLuisXfJu6uPwsV5mM_T8qcPHT-A5usyUvL4ZudmU09kVBCtme0X8WpG6EzzSiQadHeAACP32gdfsQAAKR_AfNdKgBzi76twmQ9q3Q5cyLnbZKt08"/>
+</div>
+<div class="bg-[#3a3a3a] text-white p-6 text-center flex-grow flex flex-col justify-between">
+<h3 class="text-xl font-semibold uppercase tracking-wider mb-4">Undergraduate Courses</h3>
+<div>
+<a class="inline-block bg-teal text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-teal-dark transition-colors" href="#">
+              Courseworks at IUT <i class="fa-solid fa-angles-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-white rounded overflow-hidden card-shadow flex flex-col">
+<div class="h-64 bg-[#7ab841] flex items-center justify-center p-8 border-b border-gray-100">
+<img alt="SolidProfessor" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3m2E3lvtZHB_w7yk5ju3zwn1JKmZh49NV9Y5bOj8isGrERTxej9BIZ0Npau7lV3Fzzg7xb0e5RwJso4NqGIG2T8DZKRhN0VK8WN6Hpz5D-wFIc5Iqx7mZY60n1J0Qj21TdnH8W4JYfuemBhDe81ltXuQHj-ePOmwI-6_-hhC9GsKAJS6C3RuNowzv7jkPShCZ8mjCFM_NZLzi6LmR7dY15CdVEIQSzLYVx9t7-pOKUYpPzPNF6Cs5TIPXUQP_zZef1EKrYP_b5IY"/>
+</div>
+<div class="bg-[#3a3a3a] text-white p-6 text-center flex-grow flex flex-col justify-between">
+<h3 class="text-xl font-semibold uppercase tracking-wider mb-4">SolidProfessor</h3>
+<div>
+<a class="inline-block bg-teal text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-teal-dark transition-colors" href="#">
+              Completed Courses <i class="fa-solid fa-angles-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-white rounded overflow-hidden card-shadow flex flex-col">
+<div class="h-64 bg-[#2a73cc] flex items-center justify-center p-8 border-b border-gray-100">
+<img alt="Coursera" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBatpSpb0UQACjTCQdKf53EDnawbUKGYFFTgpmn-mBytOE9MW1TiXkasalojeQdWDCYCOMExp0HGUkh7AhH4CXP3zq7-MDuWUaxVuKiMnA45nXf9O0DPRUW-mFzTIuHI8k9QKBC8ZgGljNKSWn9oOjfY90j4M8Z-0R8Z2-VYfMpYKJ2swpEiXosGbBOUTg_X33lp8VkJ-VmmsFZYctJ-DQQBoWJEsWr0U2hQRrdPZg-koprkMAbtW_HFoIIVm1f4Ze9OcYe3Ah_Z_0"/>
+</div>
+<div class="bg-[#3a3a3a] text-white p-6 text-center flex-grow flex flex-col justify-between">
+<h3 class="text-xl font-semibold uppercase tracking-wider mb-4">Coursera</h3>
+<div>
+<a class="inline-block bg-teal text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-teal-dark transition-colors" href="#">
+              Completed Courses <i class="fa-solid fa-angles-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Course Card 4 -->
+<div class="bg-white rounded overflow-hidden card-shadow flex flex-col">
+<div class="h-64 bg-white flex items-center justify-center p-8 border-b border-gray-100">
+<img alt="Siemens" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqqk5cOoHi_0CSa6Xy6MoAV_NveTy5tseFeQAvQlqYapZ0Lw0qfeAoI8yFe4yr8T-lL5L_ZZDUnVkY2KortJt-vBCRvitamGokUBZEuYR0uEFQQVTTR-j1b3MOIWOuQa22AXGH7wIqdbuXw_dSMATGjtwUWlJVrlzwX-77gw4YlSEEn0UeKRztzuF_77R4iFdPCKYWHu8mo8B-HYK-jo-fwW6m1sKrxenLDAdzU4MTbpysSzgbQ0T9xPWWNd99mIo_KtLQ7EJvJuM"/>
+</div>
+<div class="bg-[#3a3a3a] text-white p-6 text-center flex-grow flex flex-col justify-between">
+<h3 class="text-xl font-semibold uppercase tracking-wider mb-4">Siemens</h3>
+<div>
+<a class="inline-block bg-teal text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-teal-dark transition-colors" href="#">
+              Completed Courses <i class="fa-solid fa-angles-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Course Card 5 -->
+<div class="bg-white rounded overflow-hidden card-shadow flex flex-col">
+<div class="h-64 bg-gray-100 flex items-center justify-center p-8 border-b border-gray-100">
+<img alt="edX" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa3pyLzB6E6sB40mGJhXK3WnQlWmKoSeAGSqcVdancMLmEaceA8AZCJaPY-IM6VVEqbfcy3hm-_Q3zeI0OsD4NnwO97bQwwMAG5t60jY9ezh1IYlw6fu8NQqE3dR2PmiG80L24D6kVOKo3y87LdA42ZyhLzs31kuX-sWvMUnRPj_ilTjxu2Z74RHpOrU-7vkLjeJz47j2xtTWXO1tdjsw14eudUncwefIXhanq7DnNuYsP6TDY7tLr2M-7zhrptwhe15Dmu4Kxw9U"/>
+</div>
+<div class="bg-[#3a3a3a] text-white p-6 text-center flex-grow flex flex-col justify-between">
+<h3 class="text-xl font-semibold uppercase tracking-wider mb-4">edX</h3>
+<div>
+<a class="inline-block bg-teal text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-teal-dark transition-colors" href="#">
+              Completed Courses <i class="fa-solid fa-angles-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Course Card 6 -->
+<div class="bg-white rounded overflow-hidden card-shadow flex flex-col">
+<div class="h-64 bg-red-900 flex items-center justify-center p-8 border-b border-gray-100">
+<img alt="Skill-Lync" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbbt13mas-KKfEG7vlgUjML8WqiYKhHnkrO2gNPvLvIDW23UBVkDgPsrjJ9vq8ZQnHdQDNzeJDvLDWkiafqc0ArUkU3jZ_nhZ3Jv_HnV9KVJFQH2YlLXOOYPnAMVUyrSEzLJOz-AnBfl_yT6e7B1buYAJ4dd65hCpQgKbCgo-_EYb7RVf0No_CwImfwRt5a9mizKB_wH3fAJPxk3XoQ01HVt5IzCybZvC1oyiAjZC6tYUkC8TVhOouOLumXipY9z87oq7o-3U_DwE"/>
+</div>
+<div class="bg-[#3a3a3a] text-white p-6 text-center flex-grow flex flex-col justify-between">
+<h3 class="text-xl font-semibold uppercase tracking-wider mb-4">Skill-Lync</h3>
+<div>
+<a class="inline-block bg-teal text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-teal-dark transition-colors" href="#">
+              Attended webinars <i class="fa-solid fa-angles-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="bg-[#f8f9fa] border-t border-gray-200 py-8 mt-auto text-center">
+<div class="container mx-auto px-4">
+<p class="text-gray-500 text-sm">
+        © 2026 Md. Jahid Hasan. Built using WordPress and the Highlight Theme
+      </p>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

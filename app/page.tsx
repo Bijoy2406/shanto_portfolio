@@ -1,65 +1,220 @@
-import Image from "next/image";
+import { loadPortfolio } from './admin-panel/actions';
+import { Agentation } from 'agentation';
+import HtmlContent from '@/components/HtmlContent';
+import ProjectCard from '@/components/ProjectCard';
+import type { ImageItem, ProjectItem, SocialLinks } from './admin-panel/types';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+function ordered<T extends { order: number }>(items: T[]): T[] {
+  return [...items].sort((a, b) => a.order - b.order);
+}
+
+function SocialIcons({ links }: { links: SocialLinks }) {
+  const entries: { href?: string; cls: string; icon: string }[] = [
+    { href: links.linkedin, cls: 'text-[#0077b5]', icon: 'fab fa-linkedin' },
+    { href: links.google, cls: 'text-[#db4437]', icon: 'fab fa-google' },
+    { href: links.github, cls: 'text-on-surface', icon: 'fab fa-github' },
+    { href: links.facebook, cls: 'text-[#1877f2]', icon: 'fab fa-facebook' },
+  ];
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <div className="flex space-x-3 mb-4">
+      {entries
+        .filter((e) => e.href)
+        .map((e, i) => (
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            key={i}
+            href={e.href}
+            className={`${e.cls} hover:opacity-80 transition-opacity`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            <i className={`${e.icon} text-2xl`} />
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        ))}
     </div>
+  );
+}
+
+function HeroSideImages({ images }: { images: ImageItem[] }) {
+  const items = ordered(images);
+  if (items.length === 0) return null;
+  return (
+    <div className="flex flex-wrap gap-4 mt-6 justify-center">
+      {items.map((img) => (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          key={img.id}
+          src={img.url}
+          alt={img.alt ?? ''}
+          className="w-48 h-48 rounded-lg object-cover border-4 border-surface-container-lowest shadow-md"
+        />
+      ))}
+    </div>
+  );
+}
+
+function ProjectGrid({
+  projects,
+  containerCls,
+}: {
+  projects: ProjectItem[];
+  containerCls?: string;
+}) {
+  const items = ordered(projects);
+  if (items.length === 0) {
+    return (
+      <p className="text-center text-sm text-on-surface-variant italic">
+        No projects yet.
+      </p>
+    );
+  }
+  return (
+    <div className={containerCls ?? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'}>
+      {items.map((p) => (
+        <ProjectCard key={p.id} project={p} />
+      ))}
+    </div>
+  );
+}
+
+export default async function Home() {
+  const data = await loadPortfolio();
+  const home = data.home;
+  const badges = ordered(home.badges);
+
+  return (
+    <main className="flex-1 bg-background min-h-screen" data-purpose="main-content">
+      {/* Hero Section */}
+      <section className="max-w-[1200px] mx-auto px-8 pt-16 pb-12" data-purpose="hero-section">
+        <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
+          {/* Profile Column */}
+          <div className="flex flex-col items-center flex-shrink-0 order-2 md:order-1 scroll-reveal-left" data-scroll-reveal>
+            {home.profileImageUrl && (
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-md border-4 border-surface-container-lowest animate-scale-in">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  alt="Profile"
+                  className="w-full h-full object-cover object-top"
+                  src={home.profileImageUrl}
+                />
+              </div>
+            )}
+            <SocialIcons links={home.socialLinks} />
+            {home.resumeUrl && (
+              <a
+                className="text-on-tertiary-container font-semibold hover:underline border-b border-on-tertiary-container pb-1 scroll-reveal-left animation-delay-200"
+                href={home.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                See My Resume
+              </a>
+            )}
+            <HeroSideImages images={home.heroSideImages} />
+          </div>
+
+          {/* Bio Column */}
+          <div className="max-w-3xl order-1 md:order-2 scroll-reveal-right" data-scroll-reveal>
+            <h2 className="text-2xl text-on-tertiary-container mb-4 animate-fade-in-up">{home.hiText}</h2>
+            <HtmlContent
+              html={home.bioParagraph1}
+              className="text-[17px] leading-relaxed mb-6 font-medium text-on-surface animate-fade-in-up animation-delay-100"
+            />
+            <HtmlContent
+              html={home.bioParagraph2}
+              className="text-[15px] leading-relaxed mb-8 text-on-surface-variant animate-fade-in-up animation-delay-200"
+            />
+            <div className="text-center mb-6 animate-fade-in-up animation-delay-300">
+              <p className="text-sm font-semibold italic underline mb-2 text-on-surface-variant/80">
+                {home.interestsLabel}
+              </p>
+              <HtmlContent
+                html={home.interests}
+                className="text-sm font-semibold italic text-on-surface"
+              />
+            </div>
+            <div className="text-center mb-8 animate-fade-in-up animation-delay-400">
+              <p className="text-sm font-semibold italic underline mb-2 text-on-surface-variant/80">
+                {home.expertiseLabel}
+              </p>
+              <HtmlContent
+                html={home.expertise}
+                className="text-sm font-semibold italic text-on-surface"
+              />
+            </div>
+            {process.env.NODE_ENV === "development" && (
+              <div className="flex justify-center mt-8">
+                <div className="rounded-full border-2 border-primary overflow-hidden inline-block">
+                  <Agentation />
+                </div>
+              </div>
+            )}
+            {badges.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-4">
+                {badges.map((b, i) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={b.id}
+                    alt={b.alt ?? 'Badge'}
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-outline-variant shadow-sm object-cover animate-scale-in"
+                    style={{ animationDelay: `${i * 100}ms` }}
+                    src={b.url}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Overview */}
+      <section className="max-w-[1000px] mx-auto px-8 py-12 text-center scroll-reveal" data-purpose="projects-overview" data-scroll-reveal>
+        <h2 className="text-3xl font-medium mb-6 text-on-surface">My Projects Overview</h2>
+        <HtmlContent
+          html={home.projectsOverview}
+          className="text-[15px] leading-relaxed text-on-surface-variant text-left mb-6"
+        />
+        <HtmlContent
+          html={home.projectsOverviewTagline}
+          className="text-[15px] text-on-surface text-left font-medium"
+        />
+      </section>
+
+      <div className="bg-background w-full">
+        <div className="max-w-[1200px] mx-auto px-8 pt-8 pb-12">
+          {/* CAD Projects */}
+          <h3 className="text-2xl font-bold text-center mb-10 text-on-surface animate-fade-in-up">CAD Projects</h3>
+          <div className="bg-surface-container-low p-8 -mx-8 sm:mx-0 mb-16 rounded-lg scroll-reveal" data-scroll-reveal>
+            <ProjectGrid projects={home.cadProjects} />
+          </div>
+
+          {/* Simulation Projects */}
+          <h3 className="text-2xl font-bold text-center mb-10 text-on-surface mt-16 animate-fade-in-up">
+            Simulation Projects
+          </h3>
+          <div className="bg-surface-container-low p-8 -mx-8 sm:mx-0 mb-16 border border-surface-variant rounded-lg scroll-reveal" data-scroll-reveal>
+            <ProjectGrid projects={home.simulationProjects} />
+          </div>
+
+          {/* Product Design and Development */}
+          <h3 className="text-2xl font-bold text-center mb-10 text-on-surface mt-16 animate-fade-in-up">
+            Product Design and Development
+          </h3>
+          <div className="scroll-reveal" data-scroll-reveal>
+            <ProjectGrid
+              projects={home.productProjects}
+              containerCls="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-16"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="p-4 border-t border-outline-variant text-outline text-center animate-fade-in" data-purpose="footer">
+        <i className="fas fa-info-circle mr-2" />
+        <span className="text-xs">{home.footerText}</span>
+      </footer>
+    </main>
   );
 }
