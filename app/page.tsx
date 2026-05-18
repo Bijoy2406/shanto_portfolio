@@ -71,9 +71,12 @@ export default async function Home() {
       {/* Hero Section */}
       <PageContentSection name="home-hero-section">
         <section className="max-w-[1200px] mx-auto px-8 pt-16 pb-12" data-purpose="hero-section">
-          <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start justify-center">
             {/* Profile Column */}
-            <div className="flex flex-col items-center flex-shrink-0 order-2 md:order-1 scroll-reveal-left" data-scroll-reveal>
+            <div
+              className="flex flex-col items-center flex-shrink-0 order-1 scroll-reveal-left"
+              data-scroll-reveal
+            >
               {home.profileImageUrl && (
                 <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-md border-4 border-surface-container-lowest animate-scale-in">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -98,7 +101,7 @@ export default async function Home() {
             </div>
 
             {/* Bio Column */}
-            <div className="max-w-3xl order-1 md:order-2 scroll-reveal-right" data-scroll-reveal>
+            <div className="max-w-3xl order-2 scroll-reveal-right" data-scroll-reveal>
               <h2 className="text-2xl text-on-tertiary-container mb-4 animate-fade-in-up">{home.hiText}</h2>
               <HtmlContent
                 html={home.bioParagraph1}

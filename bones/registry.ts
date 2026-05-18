@@ -3,8 +3,8 @@
 import { registerBones } from 'boneyard-js'
 import { configureBoneyard } from 'boneyard-js/react'
 
-import _home_hero_section from './home-hero-section.bones.json'
 import _home_projects_section from './home-projects-section.bones.json'
+import _home_hero_section from './home-hero-section.bones.json'
 import _about_hero_section from './about-hero-section.bones.json'
 import _about_details_section from './about-details-section.bones.json'
 import _research_content from './research-content.bones.json'
@@ -22,8 +22,8 @@ import _invited_talks_content from './invited-talks-content.bones.json'
 configureBoneyard({"color":"#e0e0e0","animate":"pulse"})
 
 registerBones({
-  "home-hero-section": _home_hero_section,
   "home-projects-section": _home_projects_section,
+  "home-hero-section": _home_hero_section,
   "about-hero-section": _about_hero_section,
   "about-details-section": _about_details_section,
   "research-content": _research_content,
