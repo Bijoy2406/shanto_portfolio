@@ -1,0 +1,6 @@
+{
+  "breakpoints": [375, 768, 1280],
+  "color": "#e0e0e0",
+  "darkMode": "#333333",
+  "animate": "pulse"
+}

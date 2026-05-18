@@ -1,13 +1,7 @@
 "use client";
-
-import Link from "next/link";
-import ClientSkeleton from "@/components/ClientSkeleton";
-import { useState, useEffect } from "react";
+import BonesSkeleton from "@/components/BonesSkeleton";
 
 export default function Contact() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => { setLoading(false); }, []);
-
   return (
     <main className="flex-grow bg-surface min-h-screen flex flex-col">
       {/* Hero Section */}
@@ -24,7 +18,7 @@ export default function Contact() {
       </section>
 
       {/* Main Content */}
-      <ClientSkeleton name="contact-content" loading={loading}>
+      <BonesSkeleton name="contact-content" loading={false}>
       <div className="flex-grow container mx-auto px-6 py-16 flex flex-col items-center max-w-6xl">
         {/* Contact Card Section */}
         <div className="w-full flex flex-col md:flex-row shadow-xl mb-16 rounded overflow-hidden">
@@ -39,15 +33,19 @@ export default function Contact() {
             </div>
             <h2 className="text-xl font-serif font-bold mb-2">Khondokar Shahriar Shanto</h2>
             <div className="w-12 h-0.5 bg-white mb-6"></div>
-            <p className="text-sm text-gray-300">Replies in between 8 am to 5 pm (CDT)</p>
+            <p className="text-sm text-gray-300">Replies in between 8 am to 5 pm (BDT)</p>
           </div>
 
           {/* Map Column */}
           <div className="w-full md:w-1/3 bg-gray-200 relative min-h-[300px]">
-            <img
-              alt="Map Location"
-              className="absolute inset-0 w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuApQPfkYSPzcoeAmzCVlRsaTthWZs74CKO9TWK5MbyV38pobNPw40upDncyaQtQcPgAC11oDy9vDYVuAuimdellSoehTDs54H_904GnObvcmwGHsL9x2kaeCq0D8tMR79txlOFIGMi_Cb016x7eFhBdnQvqeNboKpg2aHXT1Fi-w7LiVvCFX-NVF4p8d0w9neH_RxbuPARAdGnLVtVVcfodgYT88Oy9g7FVqHEG7iT2-TlcebfXXRPw7edSg-4Btzh1s_QuL_qVTOs"
+            <iframe
+              title="Google Maps Location"
+              className="absolute inset-0 w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.8287!2d90.4108614!3d23.757115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b880cc472ca1%3A0x70c5bd2107bcc46b!2sQC46%2BV8H%2C%20Modhubag%20Rd%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1715996400000"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
 
@@ -170,10 +168,10 @@ export default function Contact() {
       {/* Footer */}
       <footer className="bg-gray-50 py-8 text-center text-sm text-gray-500 mt-auto">
         <div className="container mx-auto px-6">
-          © 2026 Khondokar Shahriar Shanto. Built using WordPress and the Highlight Theme
+          © 2026 Khondokar Shahriar Shanto.
         </div>
       </footer>
-      </ClientSkeleton>
+      </BonesSkeleton>
     </main>
   );
 }

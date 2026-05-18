@@ -2,6 +2,7 @@ import { loadPortfolio } from '../admin-panel/actions';
 import HtmlContent from '@/components/HtmlContent';
 
 export const dynamic = 'force-dynamic';
+import PageContentSection from '@/components/PageContentSection';
 
 export default async function Writings() {
   const data = await loadPortfolio();
@@ -21,18 +22,20 @@ export default async function Writings() {
         <h1 className="text-4xl md:text-5xl font-light tracking-widest uppercase">Writings</h1>
       </section>
 
-      <div className="container mx-auto px-6 py-16 md:py-24 scroll-reveal" data-scroll-reveal>
-        <div className="max-w-5xl mx-auto">
-          <HtmlContent
-            html={w.content}
-            className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
-          />
+      <PageContentSection name="writings-content">
+        <div className="container mx-auto px-6 py-16 md:py-24 scroll-reveal" data-scroll-reveal>
+          <div className="max-w-5xl mx-auto">
+            <HtmlContent
+              html={w.content}
+              className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
+            />
+          </div>
         </div>
-      </div>
+      </PageContentSection>
 
       <footer className="bg-surface-container-low py-8 text-center border-t border-gray-200 mt-auto animate-fade-in">
         <p className="text-gray-500 text-sm">
-          © 2026 Khondokar Shahriar Shanto. Built using WordPress and the Highlight Theme
+          © 2026 Khondokar Shahriar Shanto.
         </p>
       </footer>
     </main>

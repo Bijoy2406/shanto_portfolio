@@ -1,6 +1,8 @@
 import { loadPortfolio } from '../admin-panel/actions';
+import ListContentSection from '@/components/ListContentSection';
 import HtmlContent from '@/components/HtmlContent';
 
+import PageContentSection from '@/components/PageContentSection';
 export const dynamic = 'force-dynamic';
 
 function ordered<T extends { order: number }>(items: T[]): T[] {
@@ -27,13 +29,14 @@ export default async function Courses() {
         </div>
       </section>
 
-      <div className="flex-grow container mx-auto px-4 py-16">
-        {items.length === 0 ? (
-          <p className="text-center text-sm text-gray-500 italic py-12">
-            No courses yet.
-          </p>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <PageContentSection name="courses-content">
+        <div className="flex-grow container mx-auto px-4 py-16">
+          {items.length === 0 ? (
+            <p className="text-center text-sm text-gray-500 italic py-12">
+              No courses yet.
+            </p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {items.map((c, i) => (
               <div
                 key={c.id}
@@ -79,12 +82,13 @@ export default async function Courses() {
               </div>
             ))}
           </div>
-        )}
-      </div>
+          )}
+        </div>
+      </PageContentSection>
 
       <footer className="bg-surface-container-low py-8 text-center text-sm text-gray-500 mt-auto animate-fade-in">
         <div className="container mx-auto px-4">
-          © 2026 Khondokar Shahriar Shanto. Built using WordPress and the Highlight Theme
+          © 2026 Khondokar Shahriar Shanto.
         </div>
       </footer>
     </main>

@@ -6,7 +6,14 @@
       "Bash(curl -s http://localhost:3000/)",
       "Bash(curl -s http://localhost:3000/research)",
       "Bash(pkill -f \"next dev\")",
-      "Bash(npm run dev > /tmp/next.log 2>&1 & *)"
+      "Bash(npm run dev > /tmp/next.log 2>&1 & *)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(npx grab@latest init)",
+      "WebFetch(domain:boneyard.vercel.app)",
+      "Bash(awk '{print $NF}')",
+      "Bash(chmod +x /tmp/update_pages.sh)",
+      "Bash(/tmp/update_pages.sh)"
     ],
     "additionalDirectories": [
       "/tmp"

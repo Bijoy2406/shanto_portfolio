@@ -1,0 +1,48 @@
+{
+  "breakpoints": {
+    "375": {
+      "name": "home-projects-section",
+      "viewportWidth": 375,
+      "width": 375,
+      "height": 566,
+      "bones": []
+    },
+    "768": {
+      "name": "home-projects-section",
+      "viewportWidth": 768,
+      "width": 768,
+      "height": 349,
+      "bones": []
+    },
+    "1280": {
+      "name": "home-projects-section",
+      "viewportWidth": 1280,
+      "width": 1280,
+      "height": 324,
+      "bones": [
+        [
+          13.4375,
+          48,
+          73.125,
+          36,
+          8
+        ],
+        [
+          13.4375,
+          108,
+          73.125,
+          122,
+          8
+        ],
+        [
+          13.4375,
+          254,
+          73.125,
+          23,
+          8
+        ]
+      ]
+    }
+  },
+  "_hash": "b583b7828fcec83cbc6e8880e0f4cc0b"
+}
