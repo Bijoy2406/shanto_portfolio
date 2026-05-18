@@ -4,13 +4,13 @@
       "name": "about-details-section",
       "viewportWidth": 375,
       "width": 375,
-      "height": 397,
+      "height": 377,
       "bones": [
         [
           0,
           0,
           100,
-          397,
+          377,
           8
         ]
       ]

@@ -1,16 +1,16 @@
 # Graph Report - portfolio  (2026-05-18)
 
 ## Corpus Check
-- 83 files · ~196,027 words
+- 83 files · ~196,025 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 629 nodes · 790 edges · 38 communities (31 shown, 7 thin omitted)
+- 629 nodes · 789 edges · 39 communities (32 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9f599581`
+- Built from commit: `0d299813`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -75,7 +75,7 @@
 - `Writings()` --calls--> `loadPortfolio()`  [EXTRACTED]
   app/writings/page.tsx → app/admin-panel/actions.ts
 
-## Communities (38 total, 7 thin omitted)
+## Communities (39 total, 7 thin omitted)
 
 ### Community 0 - "TypeScript Configuration"
 Cohesion: 0.1
