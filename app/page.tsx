@@ -2,6 +2,7 @@ import { loadPortfolio } from './admin-panel/actions';
 import { Agentation } from 'agentation';
 import HtmlContent from '@/components/HtmlContent';
 import ProjectCard from '@/components/ProjectCard';
+import PageContentSection from '@/components/PageContentSection';
 import type { ImageItem, ProjectItem, SocialLinks } from './admin-panel/types';
 
 export const dynamic = 'force-dynamic';
@@ -68,99 +69,103 @@ export default async function Home() {
   return (
     <main className="flex-1 bg-background min-h-screen" data-purpose="main-content">
       {/* Hero Section */}
-      <section className="max-w-[1200px] mx-auto px-8 pt-16 pb-12" data-purpose="hero-section">
-        <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
-          {/* Profile Column */}
-          <div className="flex flex-col items-center flex-shrink-0 order-2 md:order-1 scroll-reveal-left" data-scroll-reveal>
-            {home.profileImageUrl && (
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-md border-4 border-surface-container-lowest animate-scale-in">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="Profile"
-                  className="w-full h-full object-cover object-top"
-                  src={home.profileImageUrl}
+      <PageContentSection name="home-hero-section">
+        <section className="max-w-[1200px] mx-auto px-8 pt-16 pb-12" data-purpose="hero-section">
+          <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
+            {/* Profile Column */}
+            <div className="flex flex-col items-center flex-shrink-0 order-2 md:order-1 scroll-reveal-left" data-scroll-reveal>
+              {home.profileImageUrl && (
+                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-md border-4 border-surface-container-lowest animate-scale-in">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    alt="Profile"
+                    className="w-full h-full object-cover object-top"
+                    src={home.profileImageUrl}
+                  />
+                </div>
+              )}
+              <SocialIcons links={home.socialLinks} />
+              {home.resumeUrl && (
+                <a
+                  className="text-on-tertiary-container font-semibold hover:underline border-b border-on-tertiary-container pb-1 scroll-reveal-left animation-delay-200"
+                  href={home.resumeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  See My Resume
+                </a>
+              )}
+            </div>
+
+            {/* Bio Column */}
+            <div className="max-w-3xl order-1 md:order-2 scroll-reveal-right" data-scroll-reveal>
+              <h2 className="text-2xl text-on-tertiary-container mb-4 animate-fade-in-up">{home.hiText}</h2>
+              <HtmlContent
+                html={home.bioParagraph1}
+                className="text-[17px] leading-relaxed mb-6 font-medium text-on-surface animate-fade-in-up animation-delay-100"
+              />
+              <HtmlContent
+                html={home.bioParagraph2}
+                className="text-[15px] leading-relaxed mb-8 text-on-surface-variant animate-fade-in-up animation-delay-200"
+              />
+              <div className="text-center mb-6 animate-fade-in-up animation-delay-300">
+                <p className="text-sm font-semibold italic underline mb-2 text-on-surface-variant/80">
+                  {home.interestsLabel}
+                </p>
+                <HtmlContent
+                  html={home.interests}
+                  className="text-sm font-semibold italic text-on-surface"
                 />
               </div>
-            )}
-            <SocialIcons links={home.socialLinks} />
-            {home.resumeUrl && (
-              <a
-                className="text-on-tertiary-container font-semibold hover:underline border-b border-on-tertiary-container pb-1 scroll-reveal-left animation-delay-200"
-                href={home.resumeUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                See My Resume
-              </a>
-            )}
-          </div>
-
-          {/* Bio Column */}
-          <div className="max-w-3xl order-1 md:order-2 scroll-reveal-right" data-scroll-reveal>
-            <h2 className="text-2xl text-on-tertiary-container mb-4 animate-fade-in-up">{home.hiText}</h2>
-            <HtmlContent
-              html={home.bioParagraph1}
-              className="text-[17px] leading-relaxed mb-6 font-medium text-on-surface animate-fade-in-up animation-delay-100"
-            />
-            <HtmlContent
-              html={home.bioParagraph2}
-              className="text-[15px] leading-relaxed mb-8 text-on-surface-variant animate-fade-in-up animation-delay-200"
-            />
-            <div className="text-center mb-6 animate-fade-in-up animation-delay-300">
-              <p className="text-sm font-semibold italic underline mb-2 text-on-surface-variant/80">
-                {home.interestsLabel}
-              </p>
-              <HtmlContent
-                html={home.interests}
-                className="text-sm font-semibold italic text-on-surface"
-              />
-            </div>
-            <div className="text-center mb-8 animate-fade-in-up animation-delay-400">
-              <p className="text-sm font-semibold italic underline mb-2 text-on-surface-variant/80">
-                {home.expertiseLabel}
-              </p>
-              <HtmlContent
-                html={home.expertise}
-                className="text-sm font-semibold italic text-on-surface"
-              />
-            </div>
-            {process.env.NODE_ENV === "development" && (
-              <div className="flex justify-center mt-8">
-                <div className="rounded-full border-2 border-primary overflow-hidden inline-block">
-                  <Agentation />
+              <div className="text-center mb-8 animate-fade-in-up animation-delay-400">
+                <p className="text-sm font-semibold italic underline mb-2 text-on-surface-variant/80">
+                  {home.expertiseLabel}
+                </p>
+                <HtmlContent
+                  html={home.expertise}
+                  className="text-sm font-semibold italic text-on-surface"
+                />
+              </div>
+              {process.env.NODE_ENV === "development" && (
+                <div className="flex justify-center mt-8">
+                  <div className="rounded-full border-2 border-primary overflow-hidden inline-block">
+                    <Agentation />
+                  </div>
                 </div>
-              </div>
-            )}
-            {badges.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-4">
-                {badges.map((b, i) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={b.id}
-                    alt={b.alt ?? 'Badge'}
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-outline-variant shadow-sm object-cover animate-scale-in"
-                    style={{ animationDelay: `${i * 100}ms` }}
-                    src={b.url}
-                  />
-                ))}
-              </div>
-            )}
+              )}
+              {badges.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-4">
+                  {badges.map((b, i) => (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      key={b.id}
+                      alt={b.alt ?? 'Badge'}
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-outline-variant shadow-sm object-cover animate-scale-in"
+                      style={{ animationDelay: `${i * 100}ms` }}
+                      src={b.url}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </PageContentSection>
 
       {/* Projects Overview */}
-      <section className="max-w-[1000px] mx-auto px-8 py-12 text-center scroll-reveal" data-purpose="projects-overview" data-scroll-reveal>
-        <h2 className="text-3xl font-medium mb-6 text-on-surface">My Projects Overview</h2>
-        <HtmlContent
-          html={home.projectsOverview}
-          className="text-[15px] leading-relaxed text-on-surface-variant text-left mb-6"
-        />
-        <HtmlContent
-          html={home.projectsOverviewTagline}
-          className="text-[15px] text-on-surface text-left font-medium"
-        />
-      </section>
+      <PageContentSection name="home-projects-section">
+        <section className="max-w-[1000px] mx-auto px-8 py-12 text-center scroll-reveal" data-purpose="projects-overview" data-scroll-reveal>
+          <h2 className="text-3xl font-medium mb-6 text-on-surface">My Projects Overview</h2>
+          <HtmlContent
+            html={home.projectsOverview}
+            className="text-[15px] leading-relaxed text-on-surface-variant text-left mb-6"
+          />
+          <HtmlContent
+            html={home.projectsOverviewTagline}
+            className="text-[15px] text-on-surface text-left font-medium"
+          />
+        </section>
+      </PageContentSection>
 
       <div className="bg-background w-full">
         <div className="max-w-[1200px] mx-auto px-8 pt-8 pb-12">

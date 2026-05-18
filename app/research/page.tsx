@@ -2,6 +2,7 @@ import { loadPortfolio } from '../admin-panel/actions';
 import type { ResearchStats } from '../admin-panel/types';
 import HtmlContent from '@/components/HtmlContent';
 import ResearchContent from './ResearchContent';
+import PageContentSection from '@/components/PageContentSection';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,74 +41,76 @@ export default async function Research() {
         <h1 className="text-white text-5xl md:text-6xl font-light tracking-wider uppercase">Research</h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="flex justify-center scroll-reveal-left" data-scroll-reveal>
-          {r.tagCloudImageUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              alt="Research tag cloud"
-              className="max-w-full h-auto mix-blend-multiply"
-              src={r.tagCloudImageUrl}
+      <PageContentSection name="research-content">
+        <section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center scroll-reveal-left" data-scroll-reveal>
+            {r.tagCloudImageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                alt="Research tag cloud"
+                className="max-w-full h-auto mix-blend-multiply"
+                src={r.tagCloudImageUrl}
+              />
+            ) : (
+              <div className="w-full max-w-sm aspect-square bg-surface-container-low rounded-lg flex items-center justify-center text-on-surface-variant text-sm">
+                Tag cloud image
+              </div>
+            )}
+          </div>
+          <div className="scroll-reveal-right" data-scroll-reveal>
+            <h2 className="text-3xl font-light mb-6 text-primary border-b border-gray-200 pb-2">
+              Research Interests
+            </h2>
+            <HtmlContent
+              html={r.interestsText}
+              className="text-gray-700 font-light leading-relaxed prose prose-sm max-w-none"
             />
-          ) : (
-            <div className="w-full max-w-sm aspect-square bg-surface-container-low rounded-lg flex items-center justify-center text-on-surface-variant text-sm">
-              Tag cloud image
+          </div>
+        </section>
+
+        {badges.length > 0 && (
+          <section className="max-w-7xl mx-auto px-4 pb-16 scroll-reveal" data-scroll-reveal>
+            <div className="flex flex-wrap justify-center gap-2 text-xs font-semibold text-white">
+              {badges.map((b, i) => (
+                <span
+                  key={b.id}
+                  className={`${b.colorClass} px-3 py-1 rounded animate-fade-in-up`}
+                  style={{ animationDelay: `${i * 50}ms` }}
+                >
+                  {b.label}
+                </span>
+              ))}
             </div>
-          )}
-        </div>
-        <div className="scroll-reveal-right" data-scroll-reveal>
-          <h2 className="text-3xl font-light mb-6 text-primary border-b border-gray-200 pb-2">
-            Research Interests
-          </h2>
-          <HtmlContent
-            html={r.interestsText}
-            className="text-gray-700 font-light leading-relaxed prose prose-sm max-w-none"
-          />
-        </div>
-      </section>
+          </section>
+        )}
 
-      {badges.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 pb-16 scroll-reveal" data-scroll-reveal>
-          <div className="flex flex-wrap justify-center gap-2 text-xs font-semibold text-white">
-            {badges.map((b, i) => (
-              <span
-                key={b.id}
-                className={`${b.colorClass} px-3 py-1 rounded animate-fade-in-up`}
-                style={{ animationDelay: `${i * 50}ms` }}
-              >
-                {b.label}
-              </span>
-            ))}
-          </div>
-        </section>
-      )}
+        {stats.length > 0 && (
+          <ResearchContent stats={stats} data={r} />
+        )}
 
-      {stats.length > 0 && (
-        <ResearchContent stats={stats} data={r} />
-      )}
-
-      {r.featuredResearch.length > 0 && (
-        <section className="max-w-4xl mx-auto px-4 py-16 scroll-reveal" data-scroll-reveal>
-          <h2 className="text-3xl font-light text-center mb-12 border-b border-gray-200 pb-4">
-            Featured Research
-          </h2>
-          <div className="space-y-12">
-            {ordered(r.featuredResearch).map((item, i) => (
-              <article
-                key={item.id}
-                className="scroll-reveal-left"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <h3 className="text-xl font-medium mb-3 text-primary">{item.title}</h3>
-                <HtmlContent
-                  html={item.description}
-                  className="text-gray-700 font-light text-sm leading-relaxed text-justify prose prose-sm max-w-none"
-                />
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
+        {r.featuredResearch.length > 0 && (
+          <section className="max-w-4xl mx-auto px-4 py-16 scroll-reveal" data-scroll-reveal>
+            <h2 className="text-3xl font-light text-center mb-12 border-b border-gray-200 pb-4">
+              Featured Research
+            </h2>
+            <div className="space-y-12">
+              {ordered(r.featuredResearch).map((item, i) => (
+                <article
+                  key={item.id}
+                  className="scroll-reveal-left"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  <h3 className="text-xl font-medium mb-3 text-primary">{item.title}</h3>
+                  <HtmlContent
+                    html={item.description}
+                    className="text-gray-700 font-light text-sm leading-relaxed text-justify prose prose-sm max-w-none"
+                  />
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+      </PageContentSection>
 
       <footer className="bg-primary text-white py-8 text-center text-sm font-light">
         <div className="max-w-7xl mx-auto px-4">

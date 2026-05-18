@@ -1,6 +1,8 @@
 import { loadPortfolio } from '../admin-panel/actions';
+import ListContentSection from '@/components/ListContentSection';
 import HtmlContent from '@/components/HtmlContent';
 
+import PageContentSection from '@/components/PageContentSection';
 export const dynamic = 'force-dynamic';
 
 function ordered<T extends { order: number }>(items: T[]): T[] {
@@ -29,32 +31,33 @@ export default async function Projects() {
         </div>
       </section>
 
-      <div className="flex-grow container mx-auto max-w-7xl px-4 py-16">
-        {items.length === 0 ? (
-          <p className="text-center text-sm text-gray-500 italic py-12">
-            No projects yet.
-          </p>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {items.map((p, i) => (
-              <div
-                key={p.id}
-                className="bg-[#1c1c24] rounded-lg overflow-hidden shadow-lg border border-gray-800 flex flex-col h-full group relative scroll-reveal-scale"
-                style={{ animationDelay: `${i * 100}ms` }}
-                data-scroll-reveal
-              >
-                <div className="h-48 overflow-hidden bg-white flex items-center justify-center p-4">
-                  {p.imageUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      alt={p.title}
-                      className="object-contain w-full h-full transform group-hover:scale-105 transition-transform duration-500"
-                      src={p.imageUrl}
-                    />
-                  ) : (
-                    <div className="text-gray-400 text-sm">No image</div>
-                  )}
-                </div>
+      <PageContentSection name="projects-content">
+        <div className="flex-grow container mx-auto max-w-7xl px-4 py-16">
+          {items.length === 0 ? (
+            <p className="text-center text-sm text-gray-500 italic py-12">
+              No projects yet.
+            </p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {items.map((p, i) => (
+                <div
+                  key={p.id}
+                  className="bg-[#1c1c24] rounded-lg overflow-hidden shadow-lg border border-gray-800 flex flex-col h-full group relative scroll-reveal-scale"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                  data-scroll-reveal
+                >
+                  <div className="h-48 overflow-hidden bg-white flex items-center justify-center p-4">
+                    {p.imageUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        alt={p.title}
+                        className="object-contain w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+                        src={p.imageUrl}
+                      />
+                    ) : (
+                      <div className="text-gray-400 text-sm">No image</div>
+                    )}
+                  </div>
                 <div className="p-8 text-center flex-grow flex flex-col items-center">
                   <h3 className="text-white text-xl font-bold tracking-wider mb-2 uppercase">
                     {p.title}
@@ -77,14 +80,15 @@ export default async function Projects() {
                 </div>
               </div>
             ))}
-          </div>
-        )}
-      </div>
+            </div>
+            )}
+        </div>
+      </PageContentSection>
 
       <footer className="bg-gray-100 py-6 border-t border-gray-200 mt-auto animate-fade-in">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-500 text-sm">
-            © 2026 Khondokar Shahriar Shanto. Built using WordPress and the Highlight Theme
+            © 2026 Khondokar Shahriar Shanto.
           </p>
         </div>
       </footer>

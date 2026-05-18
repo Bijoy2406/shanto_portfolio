@@ -2,6 +2,7 @@ import { loadPortfolio } from '../admin-panel/actions';
 import HtmlContent from '@/components/HtmlContent';
 
 export const dynamic = 'force-dynamic';
+import PageContentSection from '@/components/PageContentSection';
 
 function ordered<T extends { order: number }>(items: T[]): T[] {
   return [...items].sort((a, b) => a.order - b.order);
@@ -32,12 +33,13 @@ export default async function Volunteering() {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12">
-        <div className="flex-1 space-y-16">
-          {items.length === 0 && (
-            <p className="text-sm text-gray-500 italic">No volunteering entries yet.</p>
-          )}
-          {items.map((v, i) => {
+      <PageContentSection name="volunteering-content">
+        <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12">
+          <div className="flex-1 space-y-16">
+            {items.length === 0 && (
+              <p className="text-sm text-gray-500 italic">No volunteering entries yet.</p>
+            )}
+            {items.map((v, i) => {
             const reverse = i % 2 === 1;
             return (
               <article
@@ -81,9 +83,10 @@ export default async function Volunteering() {
                 </div>
               </article>
             );
-          })}
+            })}
+          </div>
         </div>
-      </div>
+      </PageContentSection>
     </main>
   );
 }

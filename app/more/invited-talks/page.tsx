@@ -1,5 +1,6 @@
 import { loadPortfolio } from '../../admin-panel/actions';
 import HtmlContent from '@/components/HtmlContent';
+import PageContentSection from '@/components/PageContentSection';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,13 +28,14 @@ export default async function InvitedTalks() {
         </h1>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        {items.length === 0 ? (
-          <p className="text-center text-sm text-gray-500 italic py-12">
-            No invited talks yet.
-          </p>
-        ) : (
-          <div className="space-y-12">
+      <PageContentSection name="invited-talks-content">
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          {items.length === 0 ? (
+            <p className="text-center text-sm text-gray-500 italic py-12">
+              No invited talks yet.
+            </p>
+          ) : (
+            <div className="space-y-12">
             {items.map((t, i) => (
               <article
                 key={t.id}
@@ -70,9 +72,10 @@ export default async function InvitedTalks() {
                 </div>
               </article>
             ))}
-          </div>
-        )}
-      </div>
+            </div>
+            )}
+        </div>
+      </PageContentSection>
 
       <footer className="bg-surface-container-low py-8 text-center border-t border-gray-200 mt-auto animate-fade-in">
         <p className="text-gray-500 text-sm">

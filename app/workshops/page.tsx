@@ -2,6 +2,7 @@ import { loadPortfolio } from '../admin-panel/actions';
 import HtmlContent from '@/components/HtmlContent';
 
 export const dynamic = 'force-dynamic';
+import PageContentSection from '@/components/PageContentSection';
 
 function ordered<T extends { order: number }>(items: T[]): T[] {
   return [...items].sort((a, b) => a.order - b.order);
@@ -30,11 +31,12 @@ export default async function Workshops() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-20 space-y-32">
-        {items.length === 0 && (
-          <p className="text-center text-sm text-gray-500 italic">No workshops yet.</p>
-        )}
-        {items.map((w, i) => {
+      <PageContentSection name="workshops-content">
+        <div className="max-w-7xl mx-auto px-6 py-20 space-y-32">
+          {items.length === 0 && (
+            <p className="text-center text-sm text-gray-500 italic">No workshops yet.</p>
+          )}
+          {items.map((w, i) => {
           const imageFirst = i % 2 === 0;
           return (
             <section
@@ -90,8 +92,9 @@ export default async function Workshops() {
               </div>
             </section>
           );
-        })}
-      </div>
+          })}
+        </div>
+      </PageContentSection>
     </main>
   );
 }

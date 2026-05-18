@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import ScrollRevealProvider from "@/components/ScrollRevealProvider";
-
-
+import ReactGrabProvider from "@/components/ReactGrabProvider";
+import "../bones/registry";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +37,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-on-surface block`}
       >
-        <Sidebar />
-        <ScrollRevealProvider />
-        {children}
+        <ReactGrabProvider>
+          <Sidebar />
+          <ScrollRevealProvider />
+          {children}
+        </ReactGrabProvider>
       </body>
     </html>
   );
