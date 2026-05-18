@@ -9,10 +9,8 @@ export default function ReactGrabProvider({
 }) {
   useEffect(() => {
     // Initialize React Grab
-    import('react-grab').then((module) => {
-      if (module.default) {
-        module.default();
-      }
+    import('react-grab').then(({ init }) => {
+      init();
     });
   }, []);
 
