@@ -37,11 +37,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-on-surface block`}
       >
-        <ReactGrabProvider>
-          <Sidebar />
-          <ScrollRevealProvider />
-          {children}
-        </ReactGrabProvider>
+        {process.env.NODE_ENV === 'development' ? (
+          <ReactGrabProvider>
+            <Sidebar />
+            <ScrollRevealProvider />
+            {children}
+          </ReactGrabProvider>
+        ) : (
+          <>
+            <Sidebar />
+            <ScrollRevealProvider />
+            {children}
+          </>
+        )}
       </body>
     </html>
   );

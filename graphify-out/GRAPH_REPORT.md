@@ -1,16 +1,16 @@
 # Graph Report - portfolio  (2026-05-18)
 
 ## Corpus Check
-- 83 files · ~196,025 words
+- 84 files · ~196,254 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 629 nodes · 789 edges · 39 communities (32 shown, 7 thin omitted)
+- 634 nodes · 793 edges · 40 communities (33 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0d299813`
+- Built from commit: `0309dc89`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,6 +50,7 @@
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 39|Community 39]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `loadPortfolio()` - 28 edges
@@ -70,12 +71,12 @@
   app/research/ResearchContent.tsx → hooks/useScrollReveal.ts
 - `Home()` --calls--> `loadPortfolio()`  [EXTRACTED]
   app/page.tsx → app/admin-panel/actions.ts
-- `Research()` --calls--> `loadPortfolio()`  [EXTRACTED]
-  app/research/page.tsx → app/admin-panel/actions.ts
 - `Writings()` --calls--> `loadPortfolio()`  [EXTRACTED]
   app/writings/page.tsx → app/admin-panel/actions.ts
+- `AdminPage()` --calls--> `loadPortfolio()`  [EXTRACTED]
+  app/admin-panel/page.tsx → app/admin-panel/actions.ts
 
-## Communities (39 total, 7 thin omitted)
+## Communities (40 total, 7 thin omitted)
 
 ### Community 0 - "TypeScript Configuration"
 Cohesion: 0.1
@@ -86,12 +87,12 @@ Cohesion: 0.11
 Nodes (18): devDependencies, agentation, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node, @types/react (+10 more)
 
 ### Community 2 - "Project Meta & Dependencies"
-Cohesion: 0.05
-Nodes (44): AboutDetailsSection(), AboutDetailsSectionProps, ordered(), Props, TabKey, TABS, defaultData, mergeWithDefaults() (+36 more)
+Cohesion: 0.06
+Nodes (40): AboutDetailsSection(), AboutDetailsSectionProps, ordered(), Props, TabKey, TABS, AchievementItem, ActionResult (+32 more)
 
 ### Community 3 - "Layout & Navigation"
-Cohesion: 0.06
-Nodes (23): geistMono, geistSans, metadata, bones, height, name, viewportWidth, width (+15 more)
+Cohesion: 0.1
+Nodes (20): bones, height, name, viewportWidth, width, bones, height, name (+12 more)
 
 ### Community 4 - "Build Scripts"
 Cohesion: 0.09
@@ -102,8 +103,8 @@ Cohesion: 0.1
 Nodes (20): bones, height, name, viewportWidth, width, bones, height, name (+12 more)
 
 ### Community 6 - "About Page"
-Cohesion: 0.08
-Nodes (30): About(), ordered(), Achievements(), ordered(), authorize(), deleteBlobAction(), loadPortfolio(), savePortfolio() (+22 more)
+Cohesion: 0.07
+Nodes (36): About(), ordered(), Achievements(), ordered(), authorize(), deleteBlobAction(), loadPortfolio(), savePortfolio() (+28 more)
 
 ### Community 7 - "Achievements"
 Cohesion: 0.1
@@ -118,8 +119,8 @@ Cohesion: 0.1
 Nodes (20): bones, height, name, viewportWidth, width, bones, height, name (+12 more)
 
 ### Community 10 - "Home Page"
-Cohesion: 0.06
-Nodes (21): AboutHeroSectionProps, ExperienceEducationSection(), ExperienceEducationSectionProps, ordered(), EducationItem, ExperienceItem, ImageItem, ProjectItem (+13 more)
+Cohesion: 0.07
+Nodes (19): AboutHeroSectionProps, ExperienceEducationSection(), ExperienceEducationSectionProps, ordered(), ImageItem, ProjectItem, SocialLinks, Home() (+11 more)
 
 ### Community 11 - "Research"
 Cohesion: 0.2
@@ -178,8 +179,8 @@ Cohesion: 0.5
 Nodes (3): orgId, projectId, projectName
 
 ### Community 34 - "Community 34"
-Cohesion: 0.1
-Nodes (20): bones, height, name, viewportWidth, width, bones, height, name (+12 more)
+Cohesion: 0.06
+Nodes (23): geistMono, geistSans, metadata, bones, height, name, viewportWidth, width (+15 more)
 
 ### Community 35 - "Community 35"
 Cohesion: 0.1
@@ -189,24 +190,28 @@ Nodes (20): bones, height, name, viewportWidth, width, bones, height, name (+12 
 Cohesion: 0.4
 Nodes (4): animate, breakpoints, color, darkMode
 
+### Community 39 - "Community 39"
+Cohesion: 0.4
+Nodes (4): dirPath, fs, path, routes
+
 ## Knowledge Gaps
-- **377 isolated node(s):** `allow`, `additionalDirectories`, `geistSans`, `geistMono`, `metadata` (+372 more)
+- **381 isolated node(s):** `name`, `viewportWidth`, `width`, `height`, `bones` (+376 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `allow`, `additionalDirectories`, `geistSans` to the rest of the system?**
-  _377 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `name`, `viewportWidth`, `width` to the rest of the system?**
+  _381 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `TypeScript Configuration` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Development Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.11 - nodes in this community are weakly interconnected._
 - **Should `Project Meta & Dependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
-- **Should `Layout & Navigation` be split into smaller, more focused modules?**
   _Cohesion score 0.06 - nodes in this community are weakly interconnected._
+- **Should `Layout & Navigation` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Build Scripts` be split into smaller, more focused modules?**
   _Cohesion score 0.09 - nodes in this community are weakly interconnected._
 - **Should `TypeScript Root` be split into smaller, more focused modules?**

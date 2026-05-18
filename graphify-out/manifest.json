@@ -5,13 +5,8 @@
     "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
   },
   "/home/salman/portfolio/next-env.d.ts": {
-    "mtime": 1779075687.308118,
-    "ast_hash": "2a74d3909800ca5467fa83b0ab4a4890",
-    "semantic_hash": ""
-  },
-  "/home/salman/portfolio/package.json": {
-    "mtime": 1779072540.9131463,
-    "ast_hash": "8d009b4dfcf3a5e14b8a7ad4ec11106a",
+    "mtime": 1779078005.3824456,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/postcss.config.mjs": {
@@ -39,18 +34,28 @@
     "ast_hash": "3835e69068c292eb7b70dbb0385c6624",
     "semantic_hash": ""
   },
+  "/home/salman/portfolio/package.json": {
+    "mtime": 1779078039.8728669,
+    "ast_hash": "8d009b4dfcf3a5e14b8a7ad4ec11106a",
+    "semantic_hash": ""
+  },
+  "/home/salman/portfolio/generate-loadings.js": {
+    "mtime": 1779079028.1866846,
+    "ast_hash": "37697379bd881e494a853a8aa95a0499",
+    "semantic_hash": ""
+  },
   "/home/salman/portfolio/app/template.tsx": {
     "mtime": 1779067959.7791855,
     "ast_hash": "83f70055f04330442343531c7950732a",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/app/page.tsx": {
-    "mtime": 1779071103.8241992,
-    "ast_hash": "352e01c2cb28cfc1ff46035757f88f5b",
+    "mtime": 1779078806.3150058,
+    "ast_hash": "74f21ff24600752e78888a4b1afb4311",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/app/layout.tsx": {
-    "mtime": 1779073888.7203808,
+    "mtime": 1779078718.402481,
     "ast_hash": "c30861e84ecf16da1ee7fd7334d92834",
     "semantic_hash": ""
   },
@@ -85,7 +90,7 @@
     "semantic_hash": ""
   },
   "/home/salman/portfolio/app/publications/page.tsx": {
-    "mtime": 1779071333.6733232,
+    "mtime": 1779077297.6971385,
     "ast_hash": "dd57d65260f1c2b48041b06697586aa8",
     "semantic_hash": ""
   },
@@ -95,7 +100,7 @@
     "semantic_hash": ""
   },
   "/home/salman/portfolio/app/research/page.tsx": {
-    "mtime": 1779069165.727658,
+    "mtime": 1779077297.6953213,
     "ast_hash": "d39f0b44b112c17fa11cecf06a111d97",
     "semantic_hash": ""
   },
@@ -234,11 +239,6 @@
     "ast_hash": "f89ae6bdb59015305912b1c4158e9d93",
     "semantic_hash": ""
   },
-  "/home/salman/portfolio/components/BonesSkeleton.tsx": {
-    "mtime": 1779069781.4843504,
-    "ast_hash": "36e283442edd28cd8f09d95e4b2033c8",
-    "semantic_hash": ""
-  },
   "/home/salman/portfolio/components/Sidebar.tsx": {
     "mtime": 1779071296.1089566,
     "ast_hash": "580137b8106dece3b965f86338f79d94",
@@ -247,6 +247,11 @@
   "/home/salman/portfolio/components/ReactGrabProvider.tsx": {
     "mtime": 1779075711.7938645,
     "ast_hash": "1275323d6720825f793a5d52df3b824d",
+    "semantic_hash": ""
+  },
+  "/home/salman/portfolio/components/BonesSkeleton.tsx": {
+    "mtime": 1779078039.875867,
+    "ast_hash": "36e283442edd28cd8f09d95e4b2033c8",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/components/home/ProjectsSection.tsx": {
@@ -299,89 +304,89 @@
     "ast_hash": "d89f5066f33db4153fe5ae9a71d8c84c",
     "semantic_hash": ""
   },
+  "/home/salman/portfolio/lib/utils.ts": {
+    "mtime": 1779072336.2170498,
+    "ast_hash": "5a6fd53fdcf2be529e9cc0b718fde352",
+    "semantic_hash": ""
+  },
   "/home/salman/portfolio/bones/home-hero-section.bones.json": {
-    "mtime": 1779070047.3768992,
-    "ast_hash": "0200dbb8b5f18489e24c7e0288d46145",
+    "mtime": 1779078915.181179,
+    "ast_hash": "5453332080580d1aa83006006f0c6423",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/home-projects-section.bones.json": {
-    "mtime": 1779070047.3768992,
-    "ast_hash": "f9ec5cb29b80c112ff2973fe24fd0ce6",
+    "mtime": 1779078915.180179,
+    "ast_hash": "c6f3ee9f058e618fe079c90151c580fb",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/about-hero-section.bones.json": {
-    "mtime": 1779070047.3768992,
-    "ast_hash": "a73adbfbf0ae70b15d6fca02ff151a05",
+    "mtime": 1779078915.181179,
+    "ast_hash": "8ed9a661f92d913b8ad3648b1406fbc4",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/about-details-section.bones.json": {
-    "mtime": 1779070047.3778994,
-    "ast_hash": "6534ebb09ef69caf56cae8effb0ee156",
-    "semantic_hash": ""
-  },
-  "/home/salman/portfolio/bones/achievements-content.bones.json": {
-    "mtime": 1779070047.3798993,
-    "ast_hash": "f9bf410a9fe867e4aeac056fae5c899d",
-    "semantic_hash": ""
-  },
-  "/home/salman/portfolio/bones/contact-content.bones.json": {
-    "mtime": 1779070047.3818994,
-    "ast_hash": "5d3f1f530031e2a4649a036dd7fa430d",
-    "semantic_hash": ""
-  },
-  "/home/salman/portfolio/bones/affiliations-content.bones.json": {
-    "mtime": 1779070047.3852963,
-    "ast_hash": "30dbcd8af478c18f4f28d8e972164f2a",
-    "semantic_hash": ""
-  },
-  "/home/salman/portfolio/bones/registry.ts": {
-    "mtime": 1779070047.3868992,
-    "ast_hash": "aec1afccc3334785b6c9eb93f11ebc0a",
+    "mtime": 1779078915.181179,
+    "ast_hash": "102a0fd168bea0ae4d549170205c4042",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/research-content.bones.json": {
-    "mtime": 1779070047.3778994,
-    "ast_hash": "d5a0b93b505345dada820344d87f8700",
+    "mtime": 1779078915.181179,
+    "ast_hash": "91ec3f1715cf27ae8a80798a4daebc8d",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/publications-content.bones.json": {
-    "mtime": 1779070047.3788993,
-    "ast_hash": "b3ec30a5597f17c85fc75e68a95eb28f",
+    "mtime": 1779078915.181179,
+    "ast_hash": "9da40ae55792fc79127908376bed1d52",
+    "semantic_hash": ""
+  },
+  "/home/salman/portfolio/bones/achievements-content.bones.json": {
+    "mtime": 1779078915.181179,
+    "ast_hash": "f9bf410a9fe867e4aeac056fae5c899d",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/writings-content.bones.json": {
-    "mtime": 1779070047.3798993,
+    "mtime": 1779078915.181179,
     "ast_hash": "bb8efa09b617499715b71af5bb76b73b",
     "semantic_hash": ""
   },
+  "/home/salman/portfolio/bones/contact-content.bones.json": {
+    "mtime": 1779078915.181179,
+    "ast_hash": "c9e4d36747ffcb84f5d98a11bf6ec0bf",
+    "semantic_hash": ""
+  },
   "/home/salman/portfolio/bones/courses-content.bones.json": {
-    "mtime": 1779070047.3818994,
+    "mtime": 1779078915.1821792,
     "ast_hash": "e55f53cf4b70c932d7a51537d2ef3f17",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/workshops-content.bones.json": {
-    "mtime": 1779070047.3828993,
+    "mtime": 1779078915.1821792,
     "ast_hash": "b08741fc13d09020b24d38bf37bf377d",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/projects-content.bones.json": {
-    "mtime": 1779070047.3828993,
+    "mtime": 1779078915.1821792,
     "ast_hash": "f542d0e56204e373245147fbba7679bc",
     "semantic_hash": ""
   },
+  "/home/salman/portfolio/bones/affiliations-content.bones.json": {
+    "mtime": 1779078915.1821792,
+    "ast_hash": "30dbcd8af478c18f4f28d8e972164f2a",
+    "semantic_hash": ""
+  },
   "/home/salman/portfolio/bones/volunteering-content.bones.json": {
-    "mtime": 1779070047.3852963,
+    "mtime": 1779078915.1821792,
     "ast_hash": "687427d14505aacf0e73ede4f996dce1",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/bones/invited-talks-content.bones.json": {
-    "mtime": 1779070047.3852963,
+    "mtime": 1779078915.1821792,
     "ast_hash": "2458b24e3e97bb9eee8b2032f3956784",
     "semantic_hash": ""
   },
-  "/home/salman/portfolio/lib/utils.ts": {
-    "mtime": 1779072336.2170498,
-    "ast_hash": "5a6fd53fdcf2be529e9cc0b718fde352",
+  "/home/salman/portfolio/bones/registry.ts": {
+    "mtime": 1779078915.1821792,
+    "ast_hash": "6c3b6edeb3fc248b1ea4208853c5be39",
     "semantic_hash": ""
   },
   "/home/salman/portfolio/AGENTS.md": {
